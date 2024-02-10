@@ -4,10 +4,10 @@
   <record name="record" javaclass="com.wm.util.Values">
     <value name="node_type">record</value>
     <value name="node_subtype">unknown</value>
-    <value name="node_nsName">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Error</value>
+    <value name="node_nsName">qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts</value>
     <value name="node_pkg">qdtAccountManagement</value>
     <value name="is_public">false</value>
-    <value name="field_name">Error</value>
+    <value name="field_name">PaginatedAccounts</value>
     <value name="field_type">record</value>
     <value name="field_dim">0</value>
     <value name="field_opt">true</value>
@@ -26,7 +26,7 @@
         <record name="required" javaclass="com.wm.util.Values">
           <value name="key">required</value>
           <array name="value" type="value" depth="1">
-            <value>message</value>
+            <value>itemCount</value>
           </array>
           <value name="type">LIST</value>
         </record>
@@ -51,25 +51,30 @@
         <value name="node_type">field</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">message</value>
-        <value name="field_type">string</value>
+        <value name="field_name">itemCount</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <null name="field_opt"/>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <value name="description">Error message detailing what went wrong.</value>
+        <value name="description">The total number of accounts available.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
           <record javaclass="com.wm.util.Values">
             <record name="type" javaclass="com.wm.util.Values">
               <value name="key">type</value>
-              <value name="value">string</value>
+              <value name="value">integer</value>
               <value name="type">STRING</value>
             </record>
-            <record name="maxLength" javaclass="com.wm.util.Values">
-              <value name="key">maxLength</value>
-              <number name="value" type="Integer">1000</number>
+            <record name="maximum" javaclass="com.wm.util.Values">
+              <value name="key">maximum</value>
+              <number name="value" type="BigDecimal">100</number>
+              <value name="type">STRING</value>
+            </record>
+            <record name="minimum" javaclass="com.wm.util.Values">
+              <value name="key">minimum</value>
+              <number name="value" type="BigDecimal">0</number>
               <value name="type">STRING</value>
             </record>
             <record name="extendedProperties" javaclass="com.wm.util.Values">
@@ -87,31 +92,73 @@
           </record>
         </array>
         <value name="nillable">false</value>
-        <null name="wrapper_type"/>
+        <value name="wrapper_type">java.math.BigInteger</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">field</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">transactionId</value>
-        <value name="field_type">string</value>
+        <value name="field_name">hasMore</value>
+        <value name="field_type">object</value>
         <value name="field_dim">0</value>
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <value name="description">A unique identifier for the transaction, for debugging.</value>
+        <value name="description">Indicates if there are more accounts to load.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
           <record javaclass="com.wm.util.Values">
             <record name="type" javaclass="com.wm.util.Values">
               <value name="key">type</value>
-              <value name="value">string</value>
+              <value name="value">boolean</value>
               <value name="type">STRING</value>
             </record>
-            <record name="maxLength" javaclass="com.wm.util.Values">
-              <value name="key">maxLength</value>
-              <number name="value" type="Integer">50</number>
+            <record name="extendedProperties" javaclass="com.wm.util.Values">
+              <record name="defaultValue" javaclass="com.wm.util.Values">
+                <value name="key">defaultValue</value>
+                <value name="value">false</value>
+                <value name="type">STRING</value>
+              </record>
+              <record name="extensionName" javaclass="com.wm.util.Values">
+                <value name="key">extensionName</value>
+                <value name="value">openapi</value>
+                <value name="type">STRING</value>
+              </record>
+              <record name="extensionVersion" javaclass="com.wm.util.Values">
+                <value name="key">extensionVersion</value>
+                <value name="value">3.0.2</value>
+                <value name="type">STRING</value>
+              </record>
+            </record>
+          </record>
+        </array>
+        <value name="nillable">false</value>
+        <value name="wrapper_type">java.lang.Boolean</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">accounts</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">1</value>
+        <value name="field_opt">true</value>
+        <value name="field_is_jsonSchema">true</value>
+        <null name="title"/>
+        <value name="description">A list of accounts.</value>
+        <null name="readOnly"/>
+        <null name="writeOnly"/>
+        <array name="field_content_type" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <record name="maxItems" javaclass="com.wm.util.Values">
+              <value name="key">maxItems</value>
+              <number name="value" type="Integer">100</number>
+              <value name="type">STRING</value>
+            </record>
+            <record name="minItems" javaclass="com.wm.util.Values">
+              <value name="key">minItems</value>
+              <number name="value" type="Integer">0</number>
               <value name="type">STRING</value>
             </record>
             <record name="extendedProperties" javaclass="com.wm.util.Values">
@@ -128,8 +175,17 @@
             </record>
           </record>
         </array>
-        <value name="nillable">false</value>
+        <value name="nillable">true</value>
         <null name="wrapper_type"/>
+        <null name="rec_fields"/>
+        <null name="rec_closed"/>
+        <null name="rec_sync_des"/>
+        <null name="schemaRegistered"/>
+        <value name="modifiable">true</value>
+        <null name="schemaCompliant"/>
+        <null name="elementWrapper"/>
+        <null name="wrappedElement"/>
+        <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account</value>
       </record>
     </array>
     <null name="rec_closed"/>
@@ -139,6 +195,6 @@
     <null name="schemaCompliant"/>
     <null name="elementWrapper"/>
     <null name="wrappedElement"/>
-    <value name="UNLOCK_REQUIRED">true</value>
+    <value name="LOCK_REQUIRED">false</value>
   </record>
 </Values>

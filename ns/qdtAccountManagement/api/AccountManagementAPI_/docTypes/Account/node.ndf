@@ -58,7 +58,9 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The unique identifier of the account.
+This id is allocated by the server so it must not be provided when creating an account using POST / accounts.
+</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -100,7 +102,7 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">Indicates if the account is active or logically deleted.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -142,7 +144,7 @@
         <null name="field_opt"/>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">Name of the account.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -189,7 +191,7 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The type of account.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -199,10 +201,18 @@
               <value name="value">string</value>
               <value name="type">STRING</value>
             </record>
-            <record name="maxLength" javaclass="com.wm.util.Values">
-              <value name="key">maxLength</value>
-              <number name="value" type="Integer">50</number>
-              <value name="type">STRING</value>
+            <record name="enumProperty" javaclass="com.wm.util.Values">
+              <value name="key">enumProperty</value>
+              <array name="value" type="value" depth="1">
+                <value>Prospect</value>
+                <value>Customer - Direct</value>
+                <value>Customer - Channel</value>
+                <value>Channel Partner / Reseller</value>
+                <value>Installation Partner</value>
+                <value>Technology Partner</value>
+                <value>Other</value>
+              </array>
+              <value name="type">LIST</value>
             </record>
             <record name="extendedProperties" javaclass="com.wm.util.Values">
               <record name="extensionName" javaclass="com.wm.util.Values">
@@ -231,7 +241,7 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">Description of the account.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -273,7 +283,7 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The ID of the parent account, if applicable.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -371,7 +381,7 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The industry sector of the account.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -413,7 +423,7 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The type of identifier for the account.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -461,7 +471,7 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The value of the account's identifier.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -503,7 +513,9 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The date and time the account was created.
+This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
+</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -545,7 +557,9 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The date and time the account was last updated.
+This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
+</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -585,6 +599,6 @@
     <null name="schemaCompliant"/>
     <null name="elementWrapper"/>
     <null name="wrappedElement"/>
-    <value name="LOCK_REQUIRED">false</value>
+    <value name="UNLOCK_REQUIRED">true</value>
   </record>
 </Values>

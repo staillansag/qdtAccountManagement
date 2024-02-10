@@ -1,0 +1,519 @@
+openapi: 3.0.0
+info:
+  title: Account Management API
+  version: 1.0.0
+  description: A CRUD API for managing accounts.
+paths:
+  /accounts:
+    get:
+      summary: Retrieve accounts based on specified criteria
+      operationId: listAccounts
+      tags: 
+        - Account
+      description: |
+        Retrieve a list of accounts based on the provided filters.
+      parameters:
+        - name: isActive
+          in: query
+          description: Filter by account activity status
+          schema:
+            type: boolean
+          example: true
+        - name: name
+          in: query
+          description: Filter by account name
+          schema:
+            type: string
+          example: "Software AG France"
+        - name: lastUpdateBefore
+          in: query
+          description: Filter by accounts last updated before the specified date
+          schema:
+            type: string
+            format: date-time
+          example: "2022-12-01T00:00:00Z"
+        - name: lastUpdateAfter
+          in: query
+          description: Filter by accounts last updated after the specified date
+          schema:
+            type: string
+            format: date-time
+          example: "2022-11-01T00:00:00Z"
+        - name: limit
+          in: query
+          description: Maximum number of accounts to return
+          schema:
+            type: integer
+            minimum: 200
+            maximum: 2000
+          example: 200
+        - name: sortBy
+          in: query
+          description: Attribute to sort the accounts by
+          schema:
+            type: string
+            enum: [id, name, lastUpdateDateTime]
+          example: "name"
+        - name: sortOrder
+          in: query
+          description: Sort order for the results
+          schema:
+            type: string
+            enum: [ascending, descending]
+          example: "ascending"
+      responses:
+        '200':
+          description: Successful operation. Returns a list of accounts.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PaginatedAccounts"
+              examples:
+                paginatedAccountsExample:
+                  summary: Exemple de comptes paginés
+                  value: 
+                    itemCount: 2
+                    hasMore: false
+                    accounts: 
+                      - id: "0017Q00000sXM0pQAG"
+                        isActive: true
+                        name: "Software AG France"
+                        type: "Customer - Direct"
+                        description: "French subsidiary of Software AG"
+                        parentAccountId: "0017Q000009ZWn6QAG"
+                        billingAddress: 
+                          street: "4 place des Saisons"
+                          city: "Courbevoie"
+                          state: ""
+                          postalCode: "92400"
+                          countryCode: "FR"
+                        shippingAddress: 
+                          street: "4 place des Saisons"
+                          city: "Courbevoie"
+                          state: ""
+                          postalCode: "92400"
+                          countryCode: "FR"
+                        industry: "NAF5829C"
+                        identifierType: "SIREN"
+                        identifierValue: "327992319"
+                        creationDateTime: "2022-12-05T11:23:56.724Z"
+                        lastUpdateDateTime: "2022-12-05T11:23:56.724Z"
+                      - id: "0017Q000009ZWn6QAG"
+                        isActive: true
+                        name: "Software AG"
+                        type: "Customer - Direct"
+                        description: "Software AG HQ"
+                        billingAddress: 
+                          street: "Uhlandstraße 12"
+                          city: "Darmstadt"
+                          state: ""
+                          postalCode: "64297"
+                          countryCode: "DE"
+                        shippingAddress: 
+                          street: "Uhlandstraße 12"
+                          city: "Darmstadt"
+                          state: ""
+                          postalCode: "64297"
+                          countryCode: "DE"
+                        industry: "SIC73737"
+                        identifierType: "VAT"
+                        identifierValue: "DE 111 660 314"
+                        creationDateTime: "2022-12-01T09:00:00.000Z"
+                        lastUpdateDateTime: "2022-12-01T09:00:00.000Z"
+        '400':
+          description: Bad request. Error details provided in the response.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '401':
+          description: Unauthorized. Authentication required.
+        '403':
+          description: Forbidden. Authorization required.
+        '500':
+          description: Internal server error.
+                  
+    post:
+      summary: Create a new account
+      operationId: createAccount
+      tags: 
+        - Account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Account"
+            example:
+              id: "0017Q00000sXM0pQAG"
+              isActive: true
+              name: "Software AG France"
+              type: "Customer - Direct"
+              description: "French subsidiary of Software AG"
+              parentAccountId: "0017Q000009ZWn6QAG"
+              billingAddress:
+                street: "4 place des Saisons"
+                city: "Courbevoie"
+                state: ""
+                postalCode: "92400"
+                countryCode: "FR"
+              shippingAddress:
+                street: "4 place des Saisons"
+                city: "Courbevoie"
+                state: ""
+                postalCode: "92400"
+                countryCode: "FR"
+              industry: "NAF5829C"
+              identifierType: "SIREN"
+              identifierValue: "327992319"
+              creationDateTime: "2022-12-05T11:23:56.724Z"
+              lastUpdateDateTime: "2022-12-05T11:23:56.724Z"
+      responses:
+        '201':
+          description: Account created successfully. Returns the newly created account.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Account"
+              example:
+                id: "0017Q00000sXM0pQAG"
+                isActive: true
+                name: "Software AG France"
+                type: "Customer - Direct"
+                description: "French subsidiary of Software AG"
+                parentAccountId: "0017Q000009ZWn6QAG"
+                billingAddress:
+                  street: "4 place des Saisons"
+                  city: "Courbevoie"
+                  state: ""
+                  postalCode: "92400"
+                  countryCode: "FR"
+                shippingAddress:
+                  street: "4 place des Saisons"
+                  city: "Courbevoie"
+                  state: ""
+                  postalCode: "92400"
+                  countryCode: "FR"
+                industry: "NAF5829C"
+                identifierType: "SIREN"
+                identifierValue: "327992319"
+                creationDateTime: "2022-12-05T11:23:56.724Z"
+                lastUpdateDateTime: "2022-12-05T11:23:56.724Z"
+        '400':
+          description: Bad request. Error details provided in the response.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '401':
+          description: Unauthorized. Authentication required.
+        '403':
+          description: Forbidden. Authorization required.
+        '500':
+          description: Internal server error.
+          
+  /accounts/{id}:
+    get:
+      summary: Retrieve an account by ID
+      operationId: getAccount
+      tags: 
+        - Account
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the account to retrieve
+          schema:
+            type: string
+          example: "0017Q00000sXM0pQAG"
+      responses:
+        '200':
+          description: Successful operation. Returns the specified account.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Account"
+              example:
+                id: "0017Q00000sXM0pQAG"
+                isActive: true
+                name: "Software AG France"
+                type: "Customer - Direct"
+                description: "French subsidiary of Software AG"
+                parentAccountId: "0017Q000009ZWn6QAG"
+                billingAddress:
+                  street: "4 place des Saisons"
+                  city: "Courbevoie"
+                  state: ""
+                  postalCode: "92400"
+                  countryCode: "FR"
+                shippingAddress:
+                  street: "4 place des Saisons"
+                  city: "Courbevoie"
+                  state: ""
+                  postalCode: "92400"
+                  countryCode: "FR"
+                industry: "NAF5829C"
+                identifierType: "SIREN"
+                identifierValue: "327992319"
+                creationDateTime: "2022-12-05T11:23:56.724Z"
+                lastUpdateDateTime: "2022-12-05T11:23:56.724Z"
+        '404':
+          description: Account not found.
+        '401':
+          description: Unauthorized. Authentication required.
+        '403':
+          description: Forbidden. Authorization required.
+        '500':
+          description: Internal server error.
+
+    put:
+      summary: Update an existing account
+      operationId: updateAccount
+      tags: 
+        - Account
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the account to update
+          schema:
+            type: string
+          example: "0017Q00000sXM0pQAG"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Account"
+            example:
+              id: "0017Q00000sXM0pQAG"
+              isActive: true
+              name: "Software AG France"
+              type: "Customer - Direct"
+              description: "French subsidiary of Software AG"
+              parentAccountId: "0017Q000009ZWn6QAG"
+              billingAddress:
+                street: "4 place des Saisons"
+                city: "Courbevoie"
+                postalCode: "92400"
+                countryCode: "FR"
+              shippingAddress:
+                street: "4 place des Saisons"
+                city: "Courbevoie"
+                postalCode: "92400"
+                countryCode: "FR"
+              industry: "NAF5829C"
+              identifierType: "SIREN"
+              identifierValue: "327992319"
+      responses:
+        '200':
+          description: Successful operation. Returns the updated account.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Account"
+              example:
+                id: "0017Q00000sXM0pQAG"
+                isActive: true
+                name: "Software AG France"
+                type: "Customer - Direct"
+                description: "French subsidiary of Software AG"
+                parentAccountId: "0017Q000009ZWn6QAG"
+                billingAddress:
+                  street: "4 place des Saisons"
+                  city: "Courbevoie"
+                  postalCode: "92400"
+                  countryCode: "FR"
+                shippingAddress:
+                  street: "4 place des Saisons"
+                  city: "Courbevoie"
+                  postalCode: "92400"
+                  countryCode: "FR"
+                industry: "NAF5829C"
+                identifierType: "SIREN"
+                identifierValue: "327992319"
+                creationDateTime: "2022-12-05T11:23:56.724Z"
+                lastUpdateDateTime: "2022-12-05T11:23:56.724Z"
+        '400':
+          description: Bad request. Error details provided in the response.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        '401':
+          description: Unauthorized. Authentication required.
+        '403':
+          description: Forbidden. Authorization required.
+        '404':
+          description: Account not found.
+        '500':
+          description: Internal server error.
+
+    delete:
+      summary: Delete an account
+      operationId: deleteAccount
+      tags: 
+        - Account
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the account to delete
+          schema:
+            type: string
+          example: "0017Q00000sXM0pQAG"
+      responses:
+        '204':
+          description: Account deleted successfully.
+        '401':
+          description: Unauthorized. Authentication required.
+        '403':
+          description: Forbidden. Authorization required.
+        '404':
+          description: Account not found.
+        '500':
+          description: Internal server error.
+
+components:
+  schemas:
+    PaginatedAccounts:
+      type: object
+      required:
+        - itemCount
+      properties:
+        itemCount:
+          type: integer
+          description: The total number of accounts available.
+          minimum: 0
+          maximum: 100
+          example: 2
+        hasMore:
+          type: boolean
+          description: Indicates if there are more accounts to load.
+          default: false
+          example: false
+        accounts:
+          type: array
+          description: A list of accounts.
+          items:
+            $ref: "#/components/schemas/Account"
+          minItems: 0
+          maxItems: 100
+    Account:
+      type: object
+      required:
+        - name
+        - shippingAddress
+      properties:
+        id:
+          type: string
+          description: |
+            The unique identifier of the account.
+            This id is allocated by the server so it must not be provided when creating an account using POST / accounts.
+          maxLength: 50
+          example: "0017Q00000sXM0pQAG"
+        isActive:
+          type: boolean
+          description: Indicates if the account is active or logically deleted.
+          default: true
+          example: true
+        name:
+          type: string
+          description: Name of the account.
+          minLength: 2
+          maxLength: 100
+          example: "Software AG France"
+        type:
+          type: string
+          description: The type of account.
+          enum: ["Prospect", "Customer - Direct", "Customer - Channel", "Channel Partner / Reseller", "Installation Partner", "Technology Partner", "Other"]
+          example: "Customer - Direct"
+        description:
+          type: string
+          description: Description of the account.
+          maxLength: 1000
+          example: "French subsidiary of Software AG"
+        parentAccountId:
+          type: string
+          description: The ID of the parent account, if applicable.
+          maxLength: 50
+          example: "0017Q000009ZWn6QAG"
+        billingAddress:
+          $ref: "#/components/schemas/Address"
+        shippingAddress:
+          $ref: "#/components/schemas/Address"
+        industry:
+          type: string
+          description: The industry sector of the account.
+          maxLength: 50
+          example: "NAF5829C"
+        identifierType:
+          type: string
+          description: The type of identifier for the account.
+          enum: [DUNS, SIREN, BVD, EXP, VAT]
+          example: "SIREN"
+        identifierValue:
+          type: string
+          description: The value of the account's identifier.
+          maxLength: 100
+          example: "327992319"
+        creationDateTime:
+          type: string
+          description: |
+            The date and time the account was created.
+            This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
+          format: date-time
+          example: "2022-12-05T11:23:56.724Z"
+        lastUpdateDateTime:
+          type: string
+          description: |
+            The date and time the account was last updated.
+            This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
+          format: date-time
+          example: "2022-12-05T11:23:56.724Z"
+    Address:
+      type: object
+      required:
+        - city
+        - countryCode
+      properties:
+        street:
+          type: string
+          description: The street of the address.
+          maxLength: 200
+          example: "4 place des Saisons"
+        city:
+          type: string
+          description: The city of the address.
+          maxLength: 100
+          example: "Courbevoie"
+        state:
+          type: string
+          description: The state or region of the address, if applicable.
+          maxLength: 50
+          example: "Hauts de Seine"
+        postalCode:
+          type: string
+          description: The postal code of the address.
+          maxLength: 50
+          example: "92400"
+        countryCode:
+          type: string
+          description: The two-letter ISO country code of the address.
+          maxLength: 2
+          example: "FR"
+    Error:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+          description: Error message detailing what went wrong.
+          maxLength: 1000
+          example: "An unexpected error occurred."
+        transactionId:
+          type: string
+          description: A unique identifier for the transaction, for debugging.
+          maxLength: 50
+          example: "TX1234567890"

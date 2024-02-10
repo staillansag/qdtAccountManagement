@@ -58,7 +58,7 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The street of the address.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -100,7 +100,7 @@
         <null name="field_opt"/>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The city of the address.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -142,7 +142,7 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The state or region of the address, if applicable.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -184,7 +184,7 @@
         <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The postal code of the address.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -226,7 +226,7 @@
         <null name="field_opt"/>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
-        <null name="description"/>
+        <value name="description">The two-letter ISO country code of the address.</value>
         <null name="readOnly"/>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
@@ -266,6 +266,6 @@
     <null name="schemaCompliant"/>
     <null name="elementWrapper"/>
     <null name="wrappedElement"/>
-    <value name="LOCK_REQUIRED">false</value>
+    <value name="UNLOCK_REQUIRED">true</value>
   </record>
 </Values>

@@ -161,6 +161,21 @@
     <value name="stopExecution">false</value>
     <value name="onError">true</value>
   </record>
+  <record name="circuitbreakersettings" javaclass="com.wm.util.Values">
+    <value name="enabled">false</value>
+    <value name="failureEvent">1</value>
+    <value name="timeoutPeriod">60</value>
+    <value name="failureThreshold">5</value>
+    <value name="failurePeriod">60</value>
+    <value name="openAction">1</value>
+    <value name="serviceToInvoke"></value>
+    <value name="resetPeriod">300</value>
+    <value name="cancelThreadOnTimeout">false</value>
+  </record>
+  <record name="concurrentrequestlimitsettings" javaclass="com.wm.util.Values">
+    <value name="maxConcurrentRequests">20</value>
+    <value name="concurrentRequestLimitEnabled">false</value>
+  </record>
   <array name="allowedHTTPMethods" type="value" depth="1">
     <value>TRACE</value>
     <value>HEAD</value>
@@ -171,8 +186,8 @@
     <value>PUT</value>
     <value>PATCH</value>
   </array>
-  <value name="pipeline_option">0</value>
-  <value name="originURI">file:///Users/stephanetailland/Library/CloudStorage/OneDrive-SoftwareAG/projets/Quadient/AccountManagementAPI.yml</value>
+  <value name="pipeline_option">1</value>
+  <value name="originURI">file://C:\SoftwareAG\IntegrationServer\packages\qdtAccountManagement\resources\api\AccountManagementAPI.yml</value>
   <value name="modifiable">true</value>
   <value name="is_public">false</value>
 </Values>

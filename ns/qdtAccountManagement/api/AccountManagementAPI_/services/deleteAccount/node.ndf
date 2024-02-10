@@ -156,7 +156,7 @@
     <value>PATCH</value>
   </array>
   <value name="pipeline_option">0</value>
-  <value name="originURI">file:///Users/stephanetailland/Library/CloudStorage/OneDrive-SoftwareAG/projets/Quadient/AccountManagementAPI.yml</value>
+  <value name="originURI">file://C:\SoftwareAG\IntegrationServer\packages\qdtAccountManagement\resources\api\AccountManagementAPI.yml</value>
   <value name="modifiable">true</value>
   <value name="is_public">false</value>
 </Values>

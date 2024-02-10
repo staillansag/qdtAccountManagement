@@ -54,17 +54,11 @@
             <record javaclass="com.wm.util.Values">
               <value name="node_type">record</value>
               <value name="node_subtype">unknown</value>
-              <value name="node_comment"></value>
-              <record name="node_hints" javaclass="com.wm.util.Values">
-                <value name="field_largerEditor">false</value>
-                <value name="field_password">false</value>
-              </record>
               <value name="is_public">false</value>
               <value name="field_name">query</value>
               <value name="field_type">record</value>
               <value name="field_dim">0</value>
               <value name="field_opt">true</value>
-              <value name="wrapper_type">IData</value>
               <value name="nillable">true</value>
               <value name="form_qualified">false</value>
               <value name="is_global">false</value>
@@ -72,11 +66,6 @@
                 <record javaclass="com.wm.util.Values">
                   <value name="node_type">field</value>
                   <value name="node_subtype">unknown</value>
-                  <value name="node_comment"></value>
-                  <record name="node_hints" javaclass="com.wm.util.Values">
-                    <value name="field_largerEditor">false</value>
-                    <value name="field_password">false</value>
-                  </record>
                   <value name="is_public">false</value>
                   <value name="field_name">isActive</value>
                   <value name="field_type">object</value>
@@ -112,20 +101,12 @@
                 <record javaclass="com.wm.util.Values">
                   <value name="node_type">field</value>
                   <value name="node_subtype">unknown</value>
-                  <value name="node_comment"></value>
-                  <record name="node_hints" javaclass="com.wm.util.Values">
-                    <value name="field_usereditable">true</value>
-                    <value name="field_largerEditor">false</value>
-                    <value name="field_password">false</value>
-                  </record>
                   <value name="is_public">false</value>
                   <value name="field_name">name</value>
                   <value name="field_type">string</value>
                   <value name="field_is_jsonSchema">true</value>
                   <value name="field_dim">0</value>
                   <value name="field_opt">true</value>
-                  <array name="field_options" type="value" depth="1">
-                  </array>
                   <array name="field_content_type" type="record" depth="1">
                     <record javaclass="com.wm.util.Values">
                       <record name="type" javaclass="com.wm.util.Values">
@@ -154,11 +135,6 @@
                 <record javaclass="com.wm.util.Values">
                   <value name="node_type">field</value>
                   <value name="node_subtype">unknown</value>
-                  <value name="node_comment"></value>
-                  <record name="node_hints" javaclass="com.wm.util.Values">
-                    <value name="field_largerEditor">false</value>
-                    <value name="field_password">false</value>
-                  </record>
                   <value name="is_public">false</value>
                   <value name="field_name">lastUpdateBefore</value>
                   <value name="field_type">object</value>
@@ -199,11 +175,6 @@
                 <record javaclass="com.wm.util.Values">
                   <value name="node_type">field</value>
                   <value name="node_subtype">unknown</value>
-                  <value name="node_comment"></value>
-                  <record name="node_hints" javaclass="com.wm.util.Values">
-                    <value name="field_largerEditor">false</value>
-                    <value name="field_password">false</value>
-                  </record>
                   <value name="is_public">false</value>
                   <value name="field_name">lastUpdateAfter</value>
                   <value name="field_type">object</value>
@@ -244,11 +215,6 @@
                 <record javaclass="com.wm.util.Values">
                   <value name="node_type">field</value>
                   <value name="node_subtype">unknown</value>
-                  <value name="node_comment"></value>
-                  <record name="node_hints" javaclass="com.wm.util.Values">
-                    <value name="field_largerEditor">false</value>
-                    <value name="field_password">false</value>
-                  </record>
                   <value name="is_public">false</value>
                   <value name="field_name">limit</value>
                   <value name="field_type">object</value>
@@ -294,20 +260,12 @@
                 <record javaclass="com.wm.util.Values">
                   <value name="node_type">field</value>
                   <value name="node_subtype">unknown</value>
-                  <value name="node_comment"></value>
-                  <record name="node_hints" javaclass="com.wm.util.Values">
-                    <value name="field_usereditable">true</value>
-                    <value name="field_largerEditor">false</value>
-                    <value name="field_password">false</value>
-                  </record>
                   <value name="is_public">false</value>
                   <value name="field_name">sortBy</value>
                   <value name="field_type">string</value>
                   <value name="field_is_jsonSchema">true</value>
                   <value name="field_dim">0</value>
                   <value name="field_opt">true</value>
-                  <array name="field_options" type="value" depth="1">
-                  </array>
                   <array name="field_content_type" type="record" depth="1">
                     <record javaclass="com.wm.util.Values">
                       <record name="type" javaclass="com.wm.util.Values">
@@ -345,20 +303,12 @@
                 <record javaclass="com.wm.util.Values">
                   <value name="node_type">field</value>
                   <value name="node_subtype">unknown</value>
-                  <value name="node_comment"></value>
-                  <record name="node_hints" javaclass="com.wm.util.Values">
-                    <value name="field_usereditable">true</value>
-                    <value name="field_largerEditor">false</value>
-                    <value name="field_password">false</value>
-                  </record>
                   <value name="is_public">false</value>
                   <value name="field_name">sortOrder</value>
                   <value name="field_type">string</value>
                   <value name="field_is_jsonSchema">true</value>
                   <value name="field_dim">0</value>
                   <value name="field_opt">true</value>
-                  <array name="field_options" type="value" depth="1">
-                  </array>
                   <array name="field_content_type" type="record" depth="1">
                     <record javaclass="com.wm.util.Values">
                       <record name="type" javaclass="com.wm.util.Values">
@@ -454,34 +404,14 @@
                 <value name="field_password">false</value>
               </record>
               <value name="is_public">false</value>
-              <value name="field_name">Account</value>
+              <value name="field_name">PaginatedAccounts</value>
               <value name="field_type">recref</value>
               <value name="field_is_jsonSchema">true</value>
-              <value name="field_dim">1</value>
+              <value name="field_dim">0</value>
               <value name="field_opt">true</value>
               <value name="wrapper_type">IData</value>
-              <array name="field_content_type" type="record" depth="1">
-                <record javaclass="com.wm.util.Values">
-                  <record name="extendedProperties" javaclass="com.wm.util.Values">
-                    <record name="extensionName" javaclass="com.wm.util.Values">
-                      <value name="key">extensionName</value>
-                      <value name="value">openapi</value>
-                      <value name="type">STRING</value>
-                    </record>
-                    <record name="extensionVersion" javaclass="com.wm.util.Values">
-                      <value name="key">extensionVersion</value>
-                      <value name="value">3.0.2</value>
-                      <value name="type">STRING</value>
-                    </record>
-                  </record>
-                </record>
-              </array>
-              <value name="nillable">true</value>
-              <Boolean name="readOnly">false</Boolean>
-              <Boolean name="writeOnly">false</Boolean>
-              <value name="is_soap_array_encoding_used">false</value>
               <value name="modifiable">true</value>
-              <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account</value>
+              <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts</value>
             </record>
           </array>
           <value name="modifiable">true</value>
@@ -506,17 +436,12 @@
               <value name="node_type">record</value>
               <value name="node_subtype">unknown</value>
               <value name="node_comment">application/json</value>
-              <record name="node_hints" javaclass="com.wm.util.Values">
-                <value name="field_largerEditor">false</value>
-                <value name="field_password">false</value>
-              </record>
               <value name="is_public">false</value>
               <value name="field_name">Error</value>
               <value name="field_type">recref</value>
               <value name="field_is_jsonSchema">true</value>
               <value name="field_dim">0</value>
               <value name="field_opt">true</value>
-              <value name="wrapper_type">IData</value>
               <value name="modifiable">true</value>
               <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Error</value>
             </record>
@@ -577,7 +502,7 @@
     <value>PATCH</value>
   </array>
   <value name="pipeline_option">1</value>
-  <value name="originURI">file:///Users/stephanetailland/Library/CloudStorage/OneDrive-SoftwareAG/projets/Quadient/AccountManagementAPI.yml</value>
+  <value name="originURI">file://C:\SoftwareAG\IntegrationServer\packages\qdtAccountManagement\resources\api\AccountManagementAPI.yml</value>
   <value name="modifiable">true</value>
   <value name="is_public">false</value>
 </Values>

@@ -8,6 +8,8 @@ servers:
 paths:
   /accounts:
     get:
+      tags:
+      - Account
       summary: Retrieve accounts based on specified criteria
       description: |
         Retrieve a list of accounts based on the provided filters.
@@ -93,33 +95,59 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Account'
-              example:
-              - id: 0017Q00000sXM0pQAG
-                isActive: true
-                name: Software AG France
-                type: Customer - Direct
-                description: French subsidiary of Software AG
-                parentAccountId: 0017Q000009ZWn6QAG
-                billingAddress:
-                  street: 4 place des Saisons
-                  city: Courbevoie
-                  state: ""
-                  postalCode: "92400"
-                  countryCode: FR
-                shippingAddress:
-                  street: 4 place des Saisons
-                  city: Courbevoie
-                  state: ""
-                  postalCode: "92400"
-                  countryCode: FR
-                industry: NAF5829C
-                identifierType: SIREN
-                identifierValue: "327992319"
-                creationDateTime: 2022-12-05T11:23:56.724Z
-                lastUpdateDateTime: 2022-12-05T11:23:56.724Z
+                $ref: '#/components/schemas/PaginatedAccounts'
+              examples:
+                paginatedAccountsExample:
+                  summary: Exemple de comptes paginÈs
+                  value:
+                    itemCount: 2
+                    hasMore: false
+                    accounts:
+                    - id: 0017Q00000sXM0pQAG
+                      isActive: true
+                      name: Software AG France
+                      type: Customer - Direct
+                      description: French subsidiary of Software AG
+                      parentAccountId: 0017Q000009ZWn6QAG
+                      billingAddress:
+                        street: 4 place des Saisons
+                        city: Courbevoie
+                        state: ""
+                        postalCode: "92400"
+                        countryCode: FR
+                      shippingAddress:
+                        street: 4 place des Saisons
+                        city: Courbevoie
+                        state: ""
+                        postalCode: "92400"
+                        countryCode: FR
+                      industry: NAF5829C
+                      identifierType: SIREN
+                      identifierValue: "327992319"
+                      creationDateTime: 2022-12-05T11:23:56.724Z
+                      lastUpdateDateTime: 2022-12-05T11:23:56.724Z
+                    - id: 0017Q000009ZWn6QAG
+                      isActive: true
+                      name: Software AG
+                      type: Customer - Direct
+                      description: Software AG HQ
+                      billingAddress:
+                        street: Uhlandstraﬂe 12
+                        city: Darmstadt
+                        state: ""
+                        postalCode: "64297"
+                        countryCode: DE
+                      shippingAddress:
+                        street: Uhlandstraﬂe 12
+                        city: Darmstadt
+                        state: ""
+                        postalCode: "64297"
+                        countryCode: DE
+                      industry: SIC73737
+                      identifierType: VAT
+                      identifierValue: DE 111 660 314
+                      creationDateTime: 2022-12-01T09:00:00.000Z
+                      lastUpdateDateTime: 2022-12-01T09:00:00.000Z
         "400":
           description: Bad request. Error details provided in the response.
           content:
@@ -133,6 +161,8 @@ paths:
         "500":
           description: Internal server error.
     post:
+      tags:
+      - Account
       summary: Create a new account
       operationId: createAccount
       requestBody:
@@ -210,6 +240,8 @@ paths:
           description: Internal server error.
   /accounts/{id}:
     get:
+      tags:
+      - Account
       summary: Retrieve an account by ID
       operationId: getAccount
       parameters:
@@ -262,6 +294,8 @@ paths:
         "500":
           description: Internal server error.
     put:
+      tags:
+      - Account
       summary: Update an existing account
       operationId: updateAccount
       parameters:
@@ -279,11 +313,56 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/Account'
-            example: null
+            example:
+              id: 0017Q00000sXM0pQAG
+              isActive: true
+              name: Software AG France
+              type: Customer - Direct
+              description: French subsidiary of Software AG
+              parentAccountId: 0017Q000009ZWn6QAG
+              billingAddress:
+                street: 4 place des Saisons
+                city: Courbevoie
+                postalCode: "92400"
+                countryCode: FR
+              shippingAddress:
+                street: 4 place des Saisons
+                city: Courbevoie
+                postalCode: "92400"
+                countryCode: FR
+              industry: NAF5829C
+              identifierType: SIREN
+              identifierValue: "327992319"
         required: true
       responses:
-        "204":
-          description: Account updated successfully.
+        "200":
+          description: Successful operation. Returns the updated account.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Account'
+              example:
+                id: 0017Q00000sXM0pQAG
+                isActive: true
+                name: Software AG France
+                type: Customer - Direct
+                description: French subsidiary of Software AG
+                parentAccountId: 0017Q000009ZWn6QAG
+                billingAddress:
+                  street: 4 place des Saisons
+                  city: Courbevoie
+                  postalCode: "92400"
+                  countryCode: FR
+                shippingAddress:
+                  street: 4 place des Saisons
+                  city: Courbevoie
+                  postalCode: "92400"
+                  countryCode: FR
+                industry: NAF5829C
+                identifierType: SIREN
+                identifierValue: "327992319"
+                creationDateTime: 2022-12-05T11:23:56.724Z
+                lastUpdateDateTime: 2022-12-05T11:23:56.724Z
         "400":
           description: Bad request. Error details provided in the response.
           content:
@@ -299,6 +378,8 @@ paths:
         "500":
           description: Internal server error.
     delete:
+      tags:
+      - Account
       summary: Delete an account
       operationId: deleteAccount
       parameters:
@@ -324,6 +405,29 @@ paths:
           description: Internal server error.
 components:
   schemas:
+    PaginatedAccounts:
+      required:
+      - itemCount
+      type: object
+      properties:
+        itemCount:
+          maximum: 100
+          minimum: 0
+          type: integer
+          description: The total number of accounts available.
+          example: 2
+        hasMore:
+          type: boolean
+          description: Indicates if there are more accounts to load.
+          example: false
+          default: false
+        accounts:
+          maxItems: 100
+          minItems: 0
+          type: array
+          description: A list of accounts.
+          items:
+            $ref: '#/components/schemas/Account'
     Account:
       required:
       - name
@@ -333,22 +437,43 @@ components:
         id:
           maxLength: 50
           type: string
+          description: |
+            The unique identifier of the account.
+            This id is allocated by the server so it must not be provided when creating an account using POST / accounts.
+          example: 0017Q00000sXM0pQAG
         isActive:
           type: boolean
+          description: Indicates if the account is active or logically deleted.
+          example: true
           default: true
         name:
           maxLength: 100
           minLength: 2
           type: string
+          description: Name of the account.
+          example: Software AG France
         type:
-          maxLength: 50
           type: string
+          description: The type of account.
+          example: Customer - Direct
+          enum:
+          - Prospect
+          - Customer - Direct
+          - Customer - Channel
+          - Channel Partner / Reseller
+          - Installation Partner
+          - Technology Partner
+          - Other
         description:
           maxLength: 1000
           type: string
+          description: Description of the account.
+          example: French subsidiary of Software AG
         parentAccountId:
           maxLength: 50
           type: string
+          description: "The ID of the parent account, if applicable."
+          example: 0017Q000009ZWn6QAG
         billingAddress:
           $ref: '#/components/schemas/Address'
         shippingAddress:
@@ -356,8 +481,12 @@ components:
         industry:
           maxLength: 50
           type: string
+          description: The industry sector of the account.
+          example: NAF5829C
         identifierType:
           type: string
+          description: The type of identifier for the account.
+          example: SIREN
           enum:
           - DUNS
           - SIREN
@@ -367,12 +496,22 @@ components:
         identifierValue:
           maxLength: 100
           type: string
+          description: The value of the account's identifier.
+          example: "327992319"
         creationDateTime:
           type: string
+          description: |
+            The date and time the account was created.
+            This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
           format: date-time
+          example: 2022-12-05T11:23:56.724Z
         lastUpdateDateTime:
           type: string
+          description: |
+            The date and time the account was last updated.
+            This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
           format: date-time
+          example: 2022-12-05T11:23:56.724Z
     Address:
       required:
       - city
@@ -382,18 +521,28 @@ components:
         street:
           maxLength: 200
           type: string
+          description: The street of the address.
+          example: 4 place des Saisons
         city:
           maxLength: 100
           type: string
+          description: The city of the address.
+          example: Courbevoie
         state:
           maxLength: 50
           type: string
+          description: "The state or region of the address, if applicable."
+          example: Hauts de Seine
         postalCode:
           maxLength: 50
           type: string
+          description: The postal code of the address.
+          example: "92400"
         countryCode:
           maxLength: 2
           type: string
+          description: The two-letter ISO country code of the address.
+          example: FR
     Error:
       required:
       - message
@@ -402,3 +551,10 @@ components:
         message:
           maxLength: 1000
           type: string
+          description: Error message detailing what went wrong.
+          example: An unexpected error occurred.
+        transactionId:
+          maxLength: 50
+          type: string
+          description: "A unique identifier for the transaction, for debugging."
+          example: TX1234567890

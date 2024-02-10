@@ -671,17 +671,11 @@
           <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
             <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
             <value name="is_public">false</value>
             <value name="field_name">query</value>
             <value name="field_type">record</value>
             <value name="field_dim">0</value>
             <value name="field_opt">true</value>
-            <value name="wrapper_type">IData</value>
             <value name="nillable">true</value>
             <value name="form_qualified">false</value>
             <value name="is_global">false</value>
@@ -689,11 +683,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">isActive</value>
                 <value name="field_type">object</value>
@@ -729,20 +718,12 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">name</value>
                 <value name="field_type">string</value>
                 <value name="field_is_jsonSchema">true</value>
                 <value name="field_dim">0</value>
                 <value name="field_opt">true</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
                 <array name="field_content_type" type="record" depth="1">
                   <record javaclass="com.wm.util.Values">
                     <record name="type" javaclass="com.wm.util.Values">
@@ -771,11 +752,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">lastUpdateBefore</value>
                 <value name="field_type">object</value>
@@ -816,11 +792,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">lastUpdateAfter</value>
                 <value name="field_type">object</value>
@@ -861,11 +832,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">limit</value>
                 <value name="field_type">object</value>
@@ -911,20 +877,12 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">sortBy</value>
                 <value name="field_type">string</value>
                 <value name="field_is_jsonSchema">true</value>
                 <value name="field_dim">0</value>
                 <value name="field_opt">true</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
                 <array name="field_content_type" type="record" depth="1">
                   <record javaclass="com.wm.util.Values">
                     <record name="type" javaclass="com.wm.util.Values">
@@ -962,20 +920,12 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">sortOrder</value>
                 <value name="field_type">string</value>
                 <value name="field_is_jsonSchema">true</value>
                 <value name="field_dim">0</value>
                 <value name="field_opt">true</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
                 <array name="field_content_type" type="record" depth="1">
                   <record javaclass="com.wm.util.Values">
                     <record name="type" javaclass="com.wm.util.Values">
@@ -1338,17 +1288,11 @@
           <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
             <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
             <value name="is_public">false</value>
             <value name="field_name">query</value>
             <value name="field_type">record</value>
             <value name="field_dim">0</value>
             <value name="field_opt">true</value>
-            <value name="wrapper_type">IData</value>
             <value name="nillable">true</value>
             <value name="form_qualified">false</value>
             <value name="is_global">false</value>
@@ -1356,11 +1300,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">isActive</value>
                 <value name="field_type">object</value>
@@ -1396,20 +1335,12 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">name</value>
                 <value name="field_type">string</value>
                 <value name="field_is_jsonSchema">true</value>
                 <value name="field_dim">0</value>
                 <value name="field_opt">true</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
                 <array name="field_content_type" type="record" depth="1">
                   <record javaclass="com.wm.util.Values">
                     <record name="type" javaclass="com.wm.util.Values">
@@ -1438,11 +1369,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">lastUpdateBefore</value>
                 <value name="field_type">object</value>
@@ -1483,11 +1409,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">lastUpdateAfter</value>
                 <value name="field_type">object</value>
@@ -1528,11 +1449,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">limit</value>
                 <value name="field_type">object</value>
@@ -1578,20 +1494,12 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">sortBy</value>
                 <value name="field_type">string</value>
                 <value name="field_is_jsonSchema">true</value>
                 <value name="field_dim">0</value>
                 <value name="field_opt">true</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
                 <array name="field_content_type" type="record" depth="1">
                   <record javaclass="com.wm.util.Values">
                     <record name="type" javaclass="com.wm.util.Values">
@@ -1629,20 +1537,12 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">sortOrder</value>
                 <value name="field_type">string</value>
                 <value name="field_is_jsonSchema">true</value>
                 <value name="field_dim">0</value>
                 <value name="field_opt">true</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
                 <array name="field_content_type" type="record" depth="1">
                   <record javaclass="com.wm.util.Values">
                     <record name="type" javaclass="com.wm.util.Values">
@@ -2112,17 +2012,11 @@
           <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
             <value name="node_subtype">unknown</value>
-            <value name="node_comment"></value>
-            <record name="node_hints" javaclass="com.wm.util.Values">
-              <value name="field_largerEditor">false</value>
-              <value name="field_password">false</value>
-            </record>
             <value name="is_public">false</value>
             <value name="field_name">query</value>
             <value name="field_type">record</value>
             <value name="field_dim">0</value>
             <value name="field_opt">true</value>
-            <value name="wrapper_type">IData</value>
             <value name="nillable">true</value>
             <value name="form_qualified">false</value>
             <value name="is_global">false</value>
@@ -2130,11 +2024,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">isActive</value>
                 <value name="field_type">object</value>
@@ -2170,20 +2059,12 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">name</value>
                 <value name="field_type">string</value>
                 <value name="field_is_jsonSchema">true</value>
                 <value name="field_dim">0</value>
                 <value name="field_opt">true</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
                 <array name="field_content_type" type="record" depth="1">
                   <record javaclass="com.wm.util.Values">
                     <record name="type" javaclass="com.wm.util.Values">
@@ -2212,11 +2093,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">lastUpdateBefore</value>
                 <value name="field_type">object</value>
@@ -2257,11 +2133,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">lastUpdateAfter</value>
                 <value name="field_type">object</value>
@@ -2302,11 +2173,6 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">limit</value>
                 <value name="field_type">object</value>
@@ -2352,20 +2218,12 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">sortBy</value>
                 <value name="field_type">string</value>
                 <value name="field_is_jsonSchema">true</value>
                 <value name="field_dim">0</value>
                 <value name="field_opt">true</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
                 <array name="field_content_type" type="record" depth="1">
                   <record javaclass="com.wm.util.Values">
                     <record name="type" javaclass="com.wm.util.Values">
@@ -2403,20 +2261,12 @@
               <record javaclass="com.wm.util.Values">
                 <value name="node_type">field</value>
                 <value name="node_subtype">unknown</value>
-                <value name="node_comment"></value>
-                <record name="node_hints" javaclass="com.wm.util.Values">
-                  <value name="field_usereditable">true</value>
-                  <value name="field_largerEditor">false</value>
-                  <value name="field_password">false</value>
-                </record>
                 <value name="is_public">false</value>
                 <value name="field_name">sortOrder</value>
                 <value name="field_type">string</value>
                 <value name="field_is_jsonSchema">true</value>
                 <value name="field_dim">0</value>
                 <value name="field_opt">true</value>
-                <array name="field_options" type="value" depth="1">
-                </array>
                 <array name="field_content_type" type="record" depth="1">
                   <record javaclass="com.wm.util.Values">
                     <record name="type" javaclass="com.wm.util.Values">
@@ -2779,6 +2629,17 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">batchSize</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">limit</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
@@ -2899,16 +2760,19 @@
 
   <!-- nodes -->
 
-<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="true" GLOBALVARIABLES="false" FIELD="/limit;1;0">
+<MAPDELETE FIELD="/limitValue;1;0">
+</MAPDELETE>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="true" GLOBALVARIABLES="false" FIELD="/batchSize;1;0">
   <DATA ENCODING="XMLValues" I18N="true">
 
 <Values version="2.0">
-  <value name="xml">LIMIT %limitValue%</value>
+  <value name="xml">batchSize=%limitValue%</value>
   <record name="type" javaclass="com.wm.util.Values">
     <value name="node_type">unknown</value>
     <value name="node_subtype">unknown</value>
     <value name="is_public">false</value>
-    <value name="field_name">limit</value>
+    <value name="field_name">batchSize</value>
     <value name="field_type">string</value>
     <value name="field_dim">0</value>
     <value name="nillable">true</value>
@@ -2918,9 +2782,6 @@
 </Values>
 </DATA>
 </MAPSET>
-
-<MAPDELETE FIELD="/limitValue;1;0">
-</MAPDELETE>
 </MAP>
 </SEQUENCE>
 </BRANCH>
@@ -3014,7 +2875,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">limit</value>
+        <value name="field_name">batchSize</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3026,6 +2887,17 @@
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
         <value name="field_name">sort</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">limit</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3163,7 +3035,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">limit</value>
+        <value name="field_name">batchSize</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3175,6 +3047,17 @@
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
         <value name="field_name">sort</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">limit</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3312,7 +3195,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">limit</value>
+        <value name="field_name">batchSize</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3324,6 +3207,17 @@
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
         <value name="field_name">sort</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">limit</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3461,7 +3355,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">limit</value>
+        <value name="field_name">batchSize</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3473,6 +3367,17 @@
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
         <value name="field_name">sort</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">limit</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3616,7 +3521,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">limit</value>
+        <value name="field_name">batchSize</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3628,6 +3533,17 @@
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
         <value name="field_name">sort</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">limit</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3765,7 +3681,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">limit</value>
+        <value name="field_name">batchSize</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3777,6 +3693,17 @@
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
         <value name="field_name">sort</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">limit</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3914,7 +3841,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">limit</value>
+        <value name="field_name">batchSize</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -3926,6 +3853,17 @@
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
         <value name="field_name">sort</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">limit</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -4027,6 +3965,17 @@
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
       </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">batchSize</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
     </array>
     <value name="modifiable">true</value>
   </record>
@@ -4114,7 +4063,7 @@
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">limit</value>
+        <value name="field_name">batchSize</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -4132,6 +4081,17 @@
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
       </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">limit</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
     </array>
     <value name="modifiable">true</value>
   </record>
@@ -4139,26 +4099,6 @@
 </MAPSOURCE>
 
   <!-- nodes -->
-
-<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="true" GLOBALVARIABLES="false" FIELD="/filter;1;0">
-  <DATA ENCODING="XMLValues" I18N="true">
-
-<Values version="2.0">
-  <value name="xml">%where% %sort% %limit%</value>
-  <record name="type" javaclass="com.wm.util.Values">
-    <value name="node_type">unknown</value>
-    <value name="node_subtype">unknown</value>
-    <value name="is_public">false</value>
-    <value name="field_name">filter</value>
-    <value name="field_type">string</value>
-    <value name="field_dim">0</value>
-    <value name="nillable">true</value>
-    <value name="form_qualified">false</value>
-    <value name="is_global">false</value>
-  </record>
-</Values>
-</DATA>
-</MAPSET>
 
 <MAPDELETE FIELD="/sort;1;0">
 </MAPDELETE>
@@ -4177,6 +4117,26 @@
 
 <MAPDELETE FIELD="/lastUpdateAfter;1;0">
 </MAPDELETE>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="true" GLOBALVARIABLES="false" FIELD="/filter;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">%where% %sort%</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">filter</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
 </MAP>
 </SEQUENCE>
 
@@ -4273,6 +4233,51 @@
             <value name="form_qualified">false</value>
             <value name="is_global">false</value>
             <array name="rec_fields" type="record" depth="1">
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="node_subtype">unknown</value>
+                <record name="node_hints" javaclass="com.wm.util.Values">
+                  <value name="field_default_value">application/json</value>
+                  <Boolean name="field_fixed">true</Boolean>
+                </record>
+                <value name="is_public">false</value>
+                <value name="field_name">Content-Type</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="node_subtype">unknown</value>
+                <record name="node_hints" javaclass="com.wm.util.Values">
+                  <value name="field_default_value">application/json</value>
+                  <Boolean name="field_fixed">true</Boolean>
+                </record>
+                <value name="is_public">false</value>
+                <value name="field_name">Accept</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">unknown</value>
+                <value name="node_subtype">unknown</value>
+                <record name="node_hints" javaclass="com.wm.util.Values">
+                  <value name="field_default_value">batchSize=200</value>
+                  <Boolean name="field_fixed">false</Boolean>
+                </record>
+                <value name="is_public">false</value>
+                <value name="field_name">Sforce-Query-Options</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
             </array>
             <value name="modifiable">true</value>
           </record>
@@ -4341,6 +4346,17 @@
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
       </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">batchSize</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
     </array>
     <value name="modifiable">true</value>
   </record>
@@ -4350,6 +4366,9 @@
   <!-- nodes -->
 
 <MAPCOPY FROM="/filter;1;0" TO="/listAccountsInput;2;0/parameters;2;0/filter;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/batchSize;1;0" TO="/listAccountsInput;2;0/requestHeaders;2;0/Sforce-Query-Options;1;0">
 </MAPCOPY>
 </MAP>
 
@@ -4392,6 +4411,20 @@
             </array>
             <value name="modifiable">true</value>
           </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">requestHeaders</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <array name="rec_fields" type="record" depth="1">
+            </array>
+            <value name="modifiable">true</value>
+          </record>
         </array>
         <value name="modifiable">true</value>
       </record>
@@ -4421,6 +4454,17 @@
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
         <value name="field_name">filter</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">batchSize</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -4473,6 +4517,9 @@
 </MAPDELETE>
 
 <MAPDELETE FIELD="/filter;1;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/batchSize;1;0">
 </MAPDELETE>
 </MAP>
 </INVOKE>
@@ -4540,34 +4587,6 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">200</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">record</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">Account</value>
-            <value name="field_type">recref</value>
-            <value name="field_dim">1</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-            <value name="is_soap_array_encoding_used">false</value>
-            <value name="modifiable">true</value>
-            <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account</value>
-          </record>
-        </array>
-        <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
         <value name="field_name">listAccountsOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
@@ -4591,6 +4610,33 @@
         <value name="is_global">false</value>
         <value name="is_soap_array_encoding_used">false</value>
         <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">200</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">PaginatedAccounts</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="modifiable">true</value>
+            <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts</value>
+          </record>
         </array>
         <value name="modifiable">true</value>
       </record>
@@ -4636,15 +4682,15 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/toList;2;1" TO="/200;2;0/Account;4;1;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account">
-</MAPCOPY>
-
 <MAPDELETE FIELD="/toList;2;1">
 </MAPDELETE>
+
+<MAPCOPY FROM="/toList;2;1" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;1;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account">
+</MAPCOPY>
 </MAP>
 </INVOKE>
 
-<LOOP TIMEOUT="" IN-ARRAY="/listAccountsOutput/responseBody/queryAllResponse/records" OUT-ARRAY="/200/Account">
+<LOOP TIMEOUT="" IN-ARRAY="/listAccountsOutput/responseBody/queryAllResponse/records" OUT-ARRAY="/200/PaginatedAccounts/accounts">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -4689,6 +4735,21 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">listAccountsOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">200</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
@@ -4700,30 +4761,15 @@
             <value name="node_type">record</value>
             <value name="node_subtype">unknown</value>
             <value name="is_public">false</value>
-            <value name="field_name">Account</value>
+            <value name="field_name">PaginatedAccounts</value>
             <value name="field_type">recref</value>
             <value name="field_dim">0</value>
             <value name="nillable">true</value>
             <value name="form_qualified">false</value>
             <value name="is_global">false</value>
             <value name="modifiable">true</value>
-            <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account</value>
+            <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts</value>
           </record>
-        </array>
-        <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">listAccountsOutput</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="wrapper_type">IData</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
       </record>
@@ -4759,20 +4805,6 @@
         <value name="field_dim">0</value>
         <value name="field_opt">true</value>
         <value name="wrapper_type">IData</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">200</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -5663,6 +5695,20 @@
         <value name="modifiable">true</value>
       </record>
       <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">200</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
@@ -5681,60 +5727,6 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/Id;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/id;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/Name;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/name;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/Type;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/type;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ParentId;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/parentAccountId;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/BillingStreet;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/billingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/street;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/BillingCity;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/billingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/city;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/BillingState;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/billingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/state;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/BillingPostalCode;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/billingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/postalCode;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/BillingCountry;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/billingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/countryCode;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ShippingStreet;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/shippingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/street;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ShippingCity;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/shippingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/city;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ShippingState;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/shippingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/state;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ShippingPostalCode;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/shippingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/postalCode;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ShippingCountry;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/shippingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/countryCode;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/Industry;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/industry;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/identifierType__c;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/identifierType;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/identifierValue__c;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/identifierValue;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/Description;1;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/description;1;0">
-</MAPCOPY>
-
 <MAPINVOKE SERVICE="qdtAccountManagement.services:jsonToJavaDate" VALIDATE-IN="$none" VALIDATE-OUT="$none" INVOKE-ORDER="0">
 
   <!-- nodes -->
@@ -5751,7 +5743,7 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/javaDate;3.9;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/creationDateTime;3.9;0">
+<MAPCOPY FROM="/javaDate;3.9;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/creationDateTime;3.9;0">
 </MAPCOPY>
 </MAP>
 </MAPINVOKE>
@@ -5772,10 +5764,64 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/javaDate;3.9;0" TO="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/lastUpdateDateTime;3.9;0">
+<MAPCOPY FROM="/javaDate;3.9;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/lastUpdateDateTime;3.9;0">
 </MAPCOPY>
 </MAP>
 </MAPINVOKE>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/Id;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/id;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/Name;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/name;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/Type;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/type;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ParentId;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/parentAccountId;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/BillingStreet;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/billingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/street;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/BillingCity;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/billingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/city;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/BillingState;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/billingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/state;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/BillingPostalCode;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/billingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/postalCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/BillingCountry;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/billingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/countryCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ShippingStreet;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/shippingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/street;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ShippingCity;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/shippingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/city;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ShippingState;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/shippingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/state;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ShippingPostalCode;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/shippingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/postalCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/ShippingCountry;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/shippingAddress;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Address/countryCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/Description;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/description;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/Industry;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/industry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/identifierType__c;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/identifierType;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/records;2;0/identifierValue__c;1;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/identifierValue;1;0">
+</MAPCOPY>
 </MAP>
 
 <BRANCH TIMEOUT="" SWITCH="/listAccountsOutput/responseBody/queryAllResponse/records/IsDeleted">
@@ -5823,6 +5869,21 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">listAccountsOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">200</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
@@ -5834,30 +5895,15 @@
             <value name="node_type">record</value>
             <value name="node_subtype">unknown</value>
             <value name="is_public">false</value>
-            <value name="field_name">Account</value>
+            <value name="field_name">PaginatedAccounts</value>
             <value name="field_type">recref</value>
             <value name="field_dim">0</value>
             <value name="nillable">true</value>
             <value name="form_qualified">false</value>
             <value name="is_global">false</value>
             <value name="modifiable">true</value>
-            <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account</value>
+            <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts</value>
           </record>
-        </array>
-        <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">listAccountsOutput</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="wrapper_type">IData</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
       </record>
@@ -5887,7 +5933,7 @@
 
   <!-- nodes -->
 
-<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/isActive;3.1;0">
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/isActive;3.1;0">
   <DATA ENCODING="XMLValues" I18N="true">
 
 <Values version="2.0">
@@ -5902,6 +5948,7 @@
     <value name="field_dim">0</value>
     <value name="field_opt">true</value>
     <value name="wrapper_type">java.lang.Boolean</value>
+    <value name="description">Indicates if the account is active or logically deleted.</value>
     <array name="field_content_type" type="record" depth="1">
       <record javaclass="com.wm.util.Values">
         <record name="type" javaclass="com.wm.util.Values">
@@ -5977,6 +6024,21 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">listAccountsOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">200</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
@@ -5988,30 +6050,15 @@
             <value name="node_type">record</value>
             <value name="node_subtype">unknown</value>
             <value name="is_public">false</value>
-            <value name="field_name">Account</value>
+            <value name="field_name">PaginatedAccounts</value>
             <value name="field_type">recref</value>
             <value name="field_dim">0</value>
             <value name="nillable">true</value>
             <value name="form_qualified">false</value>
             <value name="is_global">false</value>
             <value name="modifiable">true</value>
-            <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account</value>
+            <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts</value>
           </record>
-        </array>
-        <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">listAccountsOutput</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="wrapper_type">IData</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
       </record>
@@ -6041,7 +6088,7 @@
 
   <!-- nodes -->
 
-<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/200;2;0/Account;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/isActive;3.1;0">
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/accounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account/isActive;3.1;0">
   <DATA ENCODING="XMLValues" I18N="true">
 
 <Values version="2.0">
@@ -6056,6 +6103,7 @@
     <value name="field_dim">0</value>
     <value name="field_opt">true</value>
     <value name="wrapper_type">java.lang.Boolean</value>
+    <value name="description">Indicates if the account is active or logically deleted.</value>
     <array name="field_content_type" type="record" depth="1">
       <record javaclass="com.wm.util.Values">
         <record name="type" javaclass="com.wm.util.Values">
@@ -6092,6 +6140,636 @@
 </MAP>
 </BRANCH>
 </LOOP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">params</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">listAccountsOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">200</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">PaginatedAccounts</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="modifiable">true</value>
+            <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts</value>
+          </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">params</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">listAccountsOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">status</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">statusMessage</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">responseBody</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <array name="rec_fields" type="record" depth="1">
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">record</value>
+                <value name="node_subtype">unknown</value>
+                <value name="node_comment"></value>
+                <value name="is_public">false</value>
+                <value name="field_name">queryAllResponse</value>
+                <value name="field_type">record</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <value name="wrapper_type">IData</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+                <array name="rec_fields" type="record" depth="1">
+                  <record javaclass="com.wm.util.Values">
+                    <value name="node_type">record</value>
+                    <value name="node_subtype">unknown</value>
+                    <value name="node_comment"></value>
+                    <value name="is_public">false</value>
+                    <value name="field_name">records</value>
+                    <value name="field_type">record</value>
+                    <value name="field_dim">1</value>
+                    <value name="wrapper_type">IData</value>
+                    <value name="nillable">true</value>
+                    <value name="form_qualified">false</value>
+                    <value name="is_global">false</value>
+                    <value name="is_soap_array_encoding_used">false</value>
+                    <array name="rec_fields" type="record" depth="1">
+                    </array>
+                    <value name="modifiable">true</value>
+                  </record>
+                  <record javaclass="com.wm.util.Values">
+                    <value name="node_type">record</value>
+                    <value name="node_subtype">unknown</value>
+                    <value name="node_comment"></value>
+                    <record name="node_hints" javaclass="com.wm.util.Values">
+                      <value name="field_usereditable">true</value>
+                      <value name="field_largerEditor">false</value>
+                      <value name="field_password">false</value>
+                    </record>
+                    <value name="is_public">false</value>
+                    <value name="field_name">nextRecordsUrl</value>
+                    <value name="field_type">string</value>
+                    <value name="field_dim">0</value>
+                    <array name="field_options" type="value" depth="1">
+                    </array>
+                    <value name="nillable">true</value>
+                    <value name="form_qualified">false</value>
+                    <value name="is_global">false</value>
+                  </record>
+                  <record javaclass="com.wm.util.Values">
+                    <value name="node_type">record</value>
+                    <value name="node_subtype">unknown</value>
+                    <value name="node_comment"></value>
+                    <record name="node_hints" javaclass="com.wm.util.Values">
+                      <value name="field_largerEditor">false</value>
+                      <value name="field_password">false</value>
+                    </record>
+                    <value name="is_public">false</value>
+                    <value name="field_name">done</value>
+                    <value name="field_type">object</value>
+                    <value name="field_dim">0</value>
+                    <value name="wrapper_type">java.lang.Boolean</value>
+                    <value name="nillable">true</value>
+                    <value name="form_qualified">false</value>
+                    <value name="is_global">false</value>
+                  </record>
+                  <record javaclass="com.wm.util.Values">
+                    <value name="node_type">record</value>
+                    <value name="node_subtype">unknown</value>
+                    <value name="node_comment"></value>
+                    <record name="node_hints" javaclass="com.wm.util.Values">
+                      <value name="field_largerEditor">false</value>
+                      <value name="field_password">false</value>
+                    </record>
+                    <value name="is_public">false</value>
+                    <value name="field_name">totalSize</value>
+                    <value name="field_type">object</value>
+                    <value name="field_dim">0</value>
+                    <value name="wrapper_type">java.lang.Long</value>
+                    <value name="nillable">true</value>
+                    <value name="form_qualified">false</value>
+                    <value name="is_global">false</value>
+                  </record>
+                </array>
+                <value name="modifiable">true</value>
+              </record>
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">record</value>
+                <value name="node_subtype">unknown</value>
+                <value name="node_comment">generated by webMethods</value>
+                <value name="is_public">false</value>
+                <value name="field_name">errorResponse</value>
+                <value name="field_type">record</value>
+                <value name="field_dim">1</value>
+                <value name="field_opt">true</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+                <value name="originURI">file:///C:\Connectors\salesforce-rest\v48\errorResponse.json</value>
+                <value name="is_soap_array_encoding_used">false</value>
+                <array name="rec_fields" type="record" depth="1">
+                </array>
+                <value name="modifiable">false</value>
+              </record>
+            </array>
+            <value name="modifiable">true</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">fault</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <array name="rec_fields" type="record" depth="1">
+            </array>
+            <value name="modifiable">true</value>
+          </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">200</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/listAccountsOutput;2;0/responseBody;2;0/queryAllResponse;2;0/totalSize;3.7;0" TO="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/itemCount;3.12;0">
+</MAPCOPY>
+</MAP>
+
+<BRANCH TIMEOUT="" SWITCH="/listAccountsOutput/responseBody/queryAllResponse/nextRecordsUrl">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="$null" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">params</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">listAccountsOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">200</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">PaginatedAccounts</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="modifiable">true</value>
+            <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts</value>
+          </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/hasMore;3.1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <Boolean name="xml">false</Boolean>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">field</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">hasMore</value>
+    <value name="field_type">object</value>
+    <value name="field_is_jsonSchema">true</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <value name="wrapper_type">java.lang.Boolean</value>
+    <value name="description">Indicates if there are more accounts to load.</value>
+    <array name="field_content_type" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <record name="type" javaclass="com.wm.util.Values">
+          <value name="key">type</value>
+          <value name="value">boolean</value>
+          <value name="type">STRING</value>
+        </record>
+        <record name="extendedProperties" javaclass="com.wm.util.Values">
+          <record name="defaultValue" javaclass="com.wm.util.Values">
+            <value name="key">defaultValue</value>
+            <value name="value">false</value>
+            <value name="type">STRING</value>
+          </record>
+          <record name="extensionName" javaclass="com.wm.util.Values">
+            <value name="key">extensionName</value>
+            <value name="value">openapi</value>
+            <value name="type">STRING</value>
+          </record>
+          <record name="extensionVersion" javaclass="com.wm.util.Values">
+            <value name="key">extensionVersion</value>
+            <value name="value">3.0.2</value>
+            <value name="type">STRING</value>
+          </record>
+        </record>
+      </record>
+    </array>
+    <value name="nillable">false</value>
+    <Boolean name="readOnly">false</Boolean>
+    <Boolean name="writeOnly">false</Boolean>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP NAME="$default" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">params</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">listAccountsOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">200</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">PaginatedAccounts</value>
+            <value name="field_type">recref</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="modifiable">true</value>
+            <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts</value>
+          </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/200;2;0/PaginatedAccounts;4;0;qdtAccountManagement.api.AccountManagementAPI_.docTypes:PaginatedAccounts/hasMore;3.1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <Boolean name="xml">true</Boolean>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">field</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">hasMore</value>
+    <value name="field_type">object</value>
+    <value name="field_is_jsonSchema">true</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <value name="wrapper_type">java.lang.Boolean</value>
+    <value name="description">Indicates if there are more accounts to load.</value>
+    <array name="field_content_type" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <record name="type" javaclass="com.wm.util.Values">
+          <value name="key">type</value>
+          <value name="value">boolean</value>
+          <value name="type">STRING</value>
+        </record>
+        <record name="extendedProperties" javaclass="com.wm.util.Values">
+          <record name="defaultValue" javaclass="com.wm.util.Values">
+            <value name="key">defaultValue</value>
+            <value name="value">false</value>
+            <value name="type">STRING</value>
+          </record>
+          <record name="extensionName" javaclass="com.wm.util.Values">
+            <value name="key">extensionName</value>
+            <value name="value">openapi</value>
+            <value name="type">STRING</value>
+          </record>
+          <record name="extensionVersion" javaclass="com.wm.util.Values">
+            <value name="key">extensionVersion</value>
+            <value name="value">3.0.2</value>
+            <value name="type">STRING</value>
+          </record>
+        </record>
+      </record>
+    </array>
+    <value name="nillable">false</value>
+    <Boolean name="readOnly">false</Boolean>
+    <Boolean name="writeOnly">false</Boolean>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+</BRANCH>
 </SEQUENCE>
 
 <SEQUENCE NAME="400" TIMEOUT="" EXIT-ON="FAILURE">
@@ -6278,54 +6956,15 @@
     <value name="is_global">false</value>
     <array name="rec_fields" type="record" depth="1">
       <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="node_comment"></value>
-        <record name="node_hints" javaclass="com.wm.util.Values">
-          <value name="field_largerEditor">false</value>
-          <value name="field_password">false</value>
-        </record>
-        <value name="is_public">false</value>
-        <value name="field_name">params</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="field_opt">true</value>
-        <value name="wrapper_type">IData</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
+        <value name="node_type">unknown</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">200</value>
-        <value name="field_type">record</value>
+        <value name="field_name">message</value>
+        <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">listAccountsOutput</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="wrapper_type">IData</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
       </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">unknown</value>
@@ -6350,15 +6989,54 @@
         <value name="is_global">false</value>
       </record>
       <record javaclass="com.wm.util.Values">
-        <value name="node_type">unknown</value>
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">params</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">message</value>
-        <value name="field_type">string</value>
+        <value name="field_name">listAccountsOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">200</value>
+        <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
       </record>
     </array>
     <value name="modifiable">true</value>
@@ -6505,20 +7183,6 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">200</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
         <value name="field_name">listAccountsOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
@@ -6647,6 +7311,20 @@
             </array>
             <value name="modifiable">true</value>
           </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">200</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
       </record>
@@ -7003,9 +7681,10 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">200</value>
+        <value name="field_name">listAccountsOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -7017,10 +7696,9 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">listAccountsOutput</value>
+        <value name="field_name">200</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
-        <value name="wrapper_type">IData</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -7357,9 +8035,10 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">200</value>
+        <value name="field_name">listAccountsOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -7371,10 +8050,9 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">listAccountsOutput</value>
+        <value name="field_name">200</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
-        <value name="wrapper_type">IData</value>
         <value name="nillable">true</value>
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
@@ -7509,20 +8187,6 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">200</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
-      </record>
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
         <value name="field_name">listAccountsOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
@@ -7582,6 +8246,20 @@
             </array>
             <value name="modifiable">true</value>
           </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">200</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
         </array>
         <value name="modifiable">true</value>
       </record>

@@ -3,12 +3,12 @@
 <Values version="2.0">
   <value name="node_type">restResource</value>
   <value name="node_subtype">unknown</value>
-  <value name="node_nsName">qdtAccountManagement.api.AccountManagementAPI_.resources:_default</value>
+  <value name="node_nsName">qdtAccountManagement.api.AccountManagementAPI_.resources:Account</value>
   <value name="node_pkg">qdtAccountManagement</value>
   <value name="is_public">false</value>
   <record name="restResource" javaclass="com.wm.util.Values">
-    <value name="resourceName">_default</value>
-    <value name="nsName">qdtAccountManagement.api.AccountManagementAPI_.resources:_default</value>
+    <value name="resourceName">Account</value>
+    <value name="nsName">qdtAccountManagement.api.AccountManagementAPI_.resources:Account</value>
     <array name="operations" type="record" depth="1">
       <record javaclass="com.wm.util.Values">
         <value name="urlTemplate">/accounts</value>
@@ -52,8 +52,8 @@
       </record>
     </array>
   </record>
-  <value name="originUri">file:///Users/stephanetailland/Library/CloudStorage/OneDrive-SoftwareAG/projets/Quadient/AccountManagementAPI.yml</value>
-  <value name="resourceName">_default</value>
+  <value name="originUri">file://C:\SoftwareAG\IntegrationServer\packages\qdtAccountManagement\resources\api\AccountManagementAPI.yml</value>
+  <value name="resourceName">Account</value>
   <Boolean name="modifiable">false</Boolean>
   <null name="srcdoctypename"/>
   <null name="assocdoctypename"/>

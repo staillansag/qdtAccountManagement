@@ -148,6 +148,32 @@
           <value name="node_type">record</value>
           <value name="node_subtype">unknown</value>
           <value name="is_public">false</value>
+          <value name="field_name">200</value>
+          <value name="field_type">record</value>
+          <value name="field_is_jsonSchema">true</value>
+          <value name="field_dim">0</value>
+          <value name="field_opt">true</value>
+          <array name="rec_fields" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="node_type">record</value>
+              <value name="node_subtype">unknown</value>
+              <value name="node_comment">application/json</value>
+              <value name="is_public">false</value>
+              <value name="field_name">Account</value>
+              <value name="field_type">recref</value>
+              <value name="field_is_jsonSchema">true</value>
+              <value name="field_dim">0</value>
+              <value name="field_opt">true</value>
+              <value name="modifiable">true</value>
+              <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account</value>
+            </record>
+          </array>
+          <value name="modifiable">true</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="node_subtype">unknown</value>
+          <value name="is_public">false</value>
           <value name="field_name">400</value>
           <value name="field_type">record</value>
           <value name="field_is_jsonSchema">true</value>
@@ -207,7 +233,7 @@
     <value>PATCH</value>
   </array>
   <value name="pipeline_option">0</value>
-  <value name="originURI">file:///Users/stephanetailland/Library/CloudStorage/OneDrive-SoftwareAG/projets/Quadient/AccountManagementAPI.yml</value>
+  <value name="originURI">file://C:\SoftwareAG\IntegrationServer\packages\qdtAccountManagement\resources\api\AccountManagementAPI.yml</value>
   <value name="modifiable">true</value>
   <value name="is_public">false</value>
 </Values>
