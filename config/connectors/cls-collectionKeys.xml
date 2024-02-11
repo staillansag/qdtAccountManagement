@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<services>
-    <cloudstreamsCollectionKeys serviceName="WmCloudStreams.RestVS">
-        <servicesKeys>
-            <keyDetails collectionKey="qdtAccountManagement.salesforce:createAccount" connectorServiceName="qdtAccountManagement.salesforce:createAccount"/>
-            <keyDetails collectionKey="qdtAccountManagement.salesforce:listAccounts" connectorServiceName="qdtAccountManagement.salesforce:listAccounts"/>
-        </servicesKeys>
-    </cloudstreamsCollectionKeys>
-</services>
+<services/>

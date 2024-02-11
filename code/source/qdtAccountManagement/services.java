@@ -45,7 +45,7 @@ public final class services
 		
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
 		
-		Date date = null;
+		Date date = null; 
 		try {
 		    date = formatter.parse(jsonDate); 
 		} catch (ParseException e) {
@@ -76,7 +76,7 @@ public final class services
 		// [o] field:0:required string
 		// pipeline
 		IDataCursor pipelineCursor = pipeline.getCursor();
-		String[]	list = IDataUtil.getStringArray( pipelineCursor, "list" );
+		String[]	list = IDataUtil.getStringArray( pipelineCursor, "list" ); 
 		pipelineCursor.destroy();
 		
 		StringJoiner joiner = new StringJoiner(", ");
