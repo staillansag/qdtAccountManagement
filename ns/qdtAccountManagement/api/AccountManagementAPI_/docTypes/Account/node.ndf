@@ -27,7 +27,7 @@
           <value name="key">required</value>
           <array name="value" type="value" depth="1">
             <value>name</value>
-            <value>shippingAddress</value>
+            <value>type</value>
           </array>
           <value name="type">LIST</value>
         </record>
@@ -61,7 +61,7 @@
         <value name="description">The unique identifier of the account.
 This id is allocated by the server so it must not be provided when creating an account using POST / accounts.
 </value>
-        <null name="readOnly"/>
+        <Boolean name="readOnly">true</Boolean>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
           <record javaclass="com.wm.util.Values">
@@ -103,7 +103,7 @@ This id is allocated by the server so it must not be provided when creating an a
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
         <value name="description">Indicates if the account is active or logically deleted.</value>
-        <null name="readOnly"/>
+        <Boolean name="readOnly">true</Boolean>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
           <record javaclass="com.wm.util.Values">
@@ -188,7 +188,7 @@ This id is allocated by the server so it must not be provided when creating an a
         <value name="field_name">type</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
-        <value name="field_opt">true</value>
+        <null name="field_opt"/>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
         <value name="description">The type of account.</value>
@@ -350,7 +350,7 @@ This id is allocated by the server so it must not be provided when creating an a
         <value name="field_name">shippingAddress</value>
         <value name="field_type">recref</value>
         <value name="field_dim">0</value>
-        <null name="field_opt"/>
+        <value name="field_opt">true</value>
         <null name="correlationID"/>
         <null name="wrapper_type"/>
         <value name="field_is_jsonSchema">true</value>
@@ -516,7 +516,7 @@ This id is allocated by the server so it must not be provided when creating an a
         <value name="description">The date and time the account was created.
 This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
 </value>
-        <null name="readOnly"/>
+        <Boolean name="readOnly">true</Boolean>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
           <record javaclass="com.wm.util.Values">
@@ -560,7 +560,7 @@ This date-time is allocated by the server so it is not needed in account creatio
         <value name="description">The date and time the account was last updated.
 This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
 </value>
-        <null name="readOnly"/>
+        <Boolean name="readOnly">true</Boolean>
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
           <record javaclass="com.wm.util.Values">

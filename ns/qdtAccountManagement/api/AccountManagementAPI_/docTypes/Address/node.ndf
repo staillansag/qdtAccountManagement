@@ -73,6 +73,11 @@
               <number name="value" type="Integer">200</number>
               <value name="type">STRING</value>
             </record>
+            <record name="minLength" javaclass="com.wm.util.Values">
+              <value name="key">minLength</value>
+              <number name="value" type="Integer">2</number>
+              <value name="type">STRING</value>
+            </record>
             <record name="extendedProperties" javaclass="com.wm.util.Values">
               <record name="extensionName" javaclass="com.wm.util.Values">
                 <value name="key">extensionName</value>
@@ -113,6 +118,11 @@
             <record name="maxLength" javaclass="com.wm.util.Values">
               <value name="key">maxLength</value>
               <number name="value" type="Integer">100</number>
+              <value name="type">STRING</value>
+            </record>
+            <record name="minLength" javaclass="com.wm.util.Values">
+              <value name="key">minLength</value>
+              <number name="value" type="Integer">2</number>
               <value name="type">STRING</value>
             </record>
             <record name="extendedProperties" javaclass="com.wm.util.Values">
@@ -199,6 +209,11 @@
               <number name="value" type="Integer">50</number>
               <value name="type">STRING</value>
             </record>
+            <record name="minLength" javaclass="com.wm.util.Values">
+              <value name="key">minLength</value>
+              <number name="value" type="Integer">1</number>
+              <value name="type">STRING</value>
+            </record>
             <record name="extendedProperties" javaclass="com.wm.util.Values">
               <record name="extensionName" javaclass="com.wm.util.Values">
                 <value name="key">extensionName</value>
@@ -238,6 +253,11 @@
             </record>
             <record name="maxLength" javaclass="com.wm.util.Values">
               <value name="key">maxLength</value>
+              <number name="value" type="Integer">2</number>
+              <value name="type">STRING</value>
+            </record>
+            <record name="minLength" javaclass="com.wm.util.Values">
+              <value name="key">minLength</value>
               <number name="value" type="Integer">2</number>
               <value name="type">STRING</value>
             </record>

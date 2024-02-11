@@ -10,7 +10,9 @@ import com.wm.app.b2b.server.ServiceException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.StringJoiner;
 import java.util.TimeZone;
+import java.util.stream.Collectors;
 // --- <<IS-END-IMPORTS>> ---
 
 public final class services
@@ -57,6 +59,35 @@ public final class services
 		IDataUtil.put( pipelineCursor_1, "javaDate", date );
 		pipelineCursor_1.destroy();
 		
+			
+		// --- <<IS-END>> ---
+
+                
+	}
+
+
+
+	public static final void stringListToString (IData pipeline)
+        throws ServiceException
+	{
+		// --- <<IS-START(stringListToString)>> ---
+		// @sigtype java 3.5
+		// [i] field:1:required list
+		// [o] field:0:required string
+		// pipeline
+		IDataCursor pipelineCursor = pipeline.getCursor();
+		String[]	list = IDataUtil.getStringArray( pipelineCursor, "list" );
+		pipelineCursor.destroy();
+		
+		StringJoiner joiner = new StringJoiner(", ");
+		for (String element : list) {
+		    joiner.add(element);
+		}
+		
+		// pipeline
+		IDataCursor pipelineCursor_1 = pipeline.getCursor();
+		IDataUtil.put( pipelineCursor_1, "string", joiner.toString() );
+		pipelineCursor_1.destroy();
 			
 		// --- <<IS-END>> ---
 

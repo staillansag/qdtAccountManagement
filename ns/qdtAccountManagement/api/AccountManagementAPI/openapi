@@ -60,10 +60,10 @@ paths:
         style: form
         explode: true
         schema:
-          maximum: 100
-          minimum: 1
+          maximum: 2000
+          minimum: 200
           type: integer
-        example: 10
+        example: 200
       - name: sortBy
         in: query
         description: Attribute to sort the accounts by
@@ -160,6 +160,10 @@ paths:
           description: Forbidden. Authorization required.
         "500":
           description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
     post:
       tags:
       - Account
@@ -238,6 +242,10 @@ paths:
           description: Forbidden. Authorization required.
         "500":
           description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
   /accounts/{id}:
     get:
       tags:
@@ -285,6 +293,12 @@ paths:
                 identifierValue: "327992319"
                 creationDateTime: 2022-12-05T11:23:56.724Z
                 lastUpdateDateTime: 2022-12-05T11:23:56.724Z
+        "400":
+          description: Bad request. Error details provided in the response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
         "404":
           description: Account not found.
         "401":
@@ -293,6 +307,10 @@ paths:
           description: Forbidden. Authorization required.
         "500":
           description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
     put:
       tags:
       - Account
@@ -377,6 +395,10 @@ paths:
           description: Account not found.
         "500":
           description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
     delete:
       tags:
       - Account
@@ -395,6 +417,12 @@ paths:
       responses:
         "204":
           description: Account deleted successfully.
+        "400":
+          description: Bad request. Error details provided in the response.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
         "401":
           description: Unauthorized. Authentication required.
         "403":
@@ -403,6 +431,10 @@ paths:
           description: Account not found.
         "500":
           description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     PaginatedAccounts:
@@ -411,8 +443,6 @@ components:
       type: object
       properties:
         itemCount:
-          maximum: 100
-          minimum: 0
           type: integer
           description: The total number of accounts available.
           example: 2
@@ -422,7 +452,7 @@ components:
           example: false
           default: false
         accounts:
-          maxItems: 100
+          maxItems: 2000
           minItems: 0
           type: array
           description: A list of accounts.
@@ -431,7 +461,7 @@ components:
     Account:
       required:
       - name
-      - shippingAddress
+      - type
       type: object
       properties:
         id:
@@ -440,10 +470,12 @@ components:
           description: |
             The unique identifier of the account.
             This id is allocated by the server so it must not be provided when creating an account using POST / accounts.
+          readOnly: true
           example: 0017Q00000sXM0pQAG
         isActive:
           type: boolean
           description: Indicates if the account is active or logically deleted.
+          readOnly: true
           example: true
           default: true
         name:
@@ -504,6 +536,7 @@ components:
             The date and time the account was created.
             This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
           format: date-time
+          readOnly: true
           example: 2022-12-05T11:23:56.724Z
         lastUpdateDateTime:
           type: string
@@ -511,6 +544,7 @@ components:
             The date and time the account was last updated.
             This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
           format: date-time
+          readOnly: true
           example: 2022-12-05T11:23:56.724Z
     Address:
       required:
@@ -520,11 +554,13 @@ components:
       properties:
         street:
           maxLength: 200
+          minLength: 2
           type: string
           description: The street of the address.
           example: 4 place des Saisons
         city:
           maxLength: 100
+          minLength: 2
           type: string
           description: The city of the address.
           example: Courbevoie
@@ -535,11 +571,13 @@ components:
           example: Hauts de Seine
         postalCode:
           maxLength: 50
+          minLength: 1
           type: string
           description: The postal code of the address.
           example: "92400"
         countryCode:
           maxLength: 2
+          minLength: 2
           type: string
           description: The two-letter ISO country code of the address.
           example: FR
@@ -548,13 +586,13 @@ components:
       - message
       type: object
       properties:
-        message:
+        Exception:
           maxLength: 1000
           type: string
           description: Error message detailing what went wrong.
           example: An unexpected error occurred.
-        transactionId:
+        TransactionId:
           maxLength: 50
           type: string
           description: "A unique identifier for the transaction, for debugging."
-          example: TX1234567890
+          example: APIGW:e632bb5e-bf09-473e-958c-0f2cc202bf42:621

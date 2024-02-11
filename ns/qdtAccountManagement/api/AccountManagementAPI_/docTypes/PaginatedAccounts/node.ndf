@@ -67,16 +67,6 @@
               <value name="value">integer</value>
               <value name="type">STRING</value>
             </record>
-            <record name="maximum" javaclass="com.wm.util.Values">
-              <value name="key">maximum</value>
-              <number name="value" type="BigDecimal">100</number>
-              <value name="type">STRING</value>
-            </record>
-            <record name="minimum" javaclass="com.wm.util.Values">
-              <value name="key">minimum</value>
-              <number name="value" type="BigDecimal">0</number>
-              <value name="type">STRING</value>
-            </record>
             <record name="extendedProperties" javaclass="com.wm.util.Values">
               <record name="extensionName" javaclass="com.wm.util.Values">
                 <value name="key">extensionName</value>
@@ -153,7 +143,7 @@
           <record javaclass="com.wm.util.Values">
             <record name="maxItems" javaclass="com.wm.util.Values">
               <value name="key">maxItems</value>
-              <number name="value" type="Integer">100</number>
+              <number name="value" type="Integer">2000</number>
               <value name="type">STRING</value>
             </record>
             <record name="minItems" javaclass="com.wm.util.Values">
@@ -195,6 +185,6 @@
     <null name="schemaCompliant"/>
     <null name="elementWrapper"/>
     <null name="wrappedElement"/>
-    <value name="LOCK_REQUIRED">false</value>
+    <value name="UNLOCK_REQUIRED">true</value>
   </record>
 </Values>

@@ -132,6 +132,10 @@ paths:
           description: Forbidden. Authorization required.
         '500':
           description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
                   
     post:
       summary: Create a new account
@@ -145,8 +149,6 @@ paths:
             schema:
               $ref: "#/components/schemas/Account"
             example:
-              id: "0017Q00000sXM0pQAG"
-              isActive: true
               name: "Software AG France"
               type: "Customer - Direct"
               description: "French subsidiary of Software AG"
@@ -166,8 +168,6 @@ paths:
               industry: "NAF5829C"
               identifierType: "SIREN"
               identifierValue: "327992319"
-              creationDateTime: "2022-12-05T11:23:56.724Z"
-              lastUpdateDateTime: "2022-12-05T11:23:56.724Z"
       responses:
         '201':
           description: Account created successfully. Returns the newly created account.
@@ -211,6 +211,10 @@ paths:
           description: Forbidden. Authorization required.
         '500':
           description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
           
   /accounts/{id}:
     get:
@@ -257,6 +261,12 @@ paths:
                 identifierValue: "327992319"
                 creationDateTime: "2022-12-05T11:23:56.724Z"
                 lastUpdateDateTime: "2022-12-05T11:23:56.724Z"
+        '400':
+          description: Bad request. Error details provided in the response.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
         '404':
           description: Account not found.
         '401':
@@ -265,6 +275,10 @@ paths:
           description: Forbidden. Authorization required.
         '500':
           description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
 
     put:
       summary: Update an existing account
@@ -286,8 +300,6 @@ paths:
             schema:
               $ref: "#/components/schemas/Account"
             example:
-              id: "0017Q00000sXM0pQAG"
-              isActive: true
               name: "Software AG France"
               type: "Customer - Direct"
               description: "French subsidiary of Software AG"
@@ -348,6 +360,10 @@ paths:
           description: Account not found.
         '500':
           description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
 
     delete:
       summary: Delete an account
@@ -365,6 +381,12 @@ paths:
       responses:
         '204':
           description: Account deleted successfully.
+        '400':
+          description: Bad request. Error details provided in the response.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
         '401':
           description: Unauthorized. Authentication required.
         '403':
@@ -373,6 +395,10 @@ paths:
           description: Account not found.
         '500':
           description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
 
 components:
   schemas:
@@ -384,8 +410,6 @@ components:
         itemCount:
           type: integer
           description: The total number of accounts available.
-          minimum: 0
-          maximum: 100
           example: 2
         hasMore:
           type: boolean
@@ -398,12 +422,12 @@ components:
           items:
             $ref: "#/components/schemas/Account"
           minItems: 0
-          maxItems: 100
+          maxItems: 2000
     Account:
       type: object
       required:
         - name
-        - shippingAddress
+        - type
       properties:
         id:
           type: string
@@ -412,11 +436,13 @@ components:
             This id is allocated by the server so it must not be provided when creating an account using POST / accounts.
           maxLength: 50
           example: "0017Q00000sXM0pQAG"
+          readOnly: true
         isActive:
           type: boolean
           description: Indicates if the account is active or logically deleted.
           default: true
           example: true
+          readOnly: true
         name:
           type: string
           description: Name of the account.
@@ -464,6 +490,7 @@ components:
             This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
           format: date-time
           example: "2022-12-05T11:23:56.724Z"
+          readOnly: true
         lastUpdateDateTime:
           type: string
           description: |
@@ -471,6 +498,7 @@ components:
             This date-time is allocated by the server so it is not needed in account creation (POST /accounts) and update (PUT /accounts/{accountId}).
           format: date-time
           example: "2022-12-05T11:23:56.724Z"
+          readOnly: true
     Address:
       type: object
       required:
@@ -480,11 +508,13 @@ components:
         street:
           type: string
           description: The street of the address.
+          minLength: 2
           maxLength: 200
           example: "4 place des Saisons"
         city:
           type: string
           description: The city of the address.
+          minLength: 2
           maxLength: 100
           example: "Courbevoie"
         state:
@@ -495,11 +525,13 @@ components:
         postalCode:
           type: string
           description: The postal code of the address.
+          minLength: 1
           maxLength: 50
           example: "92400"
         countryCode:
           type: string
           description: The two-letter ISO country code of the address.
+          minLength: 2
           maxLength: 2
           example: "FR"
     Error:
@@ -507,13 +539,13 @@ components:
       required:
         - message
       properties:
-        message:
+        Exception:
           type: string
           description: Error message detailing what went wrong.
           maxLength: 1000
           example: "An unexpected error occurred."
-        transactionId:
+        TransactionId:
           type: string
           description: A unique identifier for the transaction, for debugging.
           maxLength: 50
-          example: "TX1234567890"
+          example: "APIGW:e632bb5e-bf09-473e-958c-0f2cc202bf42:621"

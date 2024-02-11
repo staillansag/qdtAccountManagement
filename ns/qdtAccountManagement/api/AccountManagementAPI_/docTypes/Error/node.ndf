@@ -51,10 +51,10 @@
         <value name="node_type">field</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">message</value>
+        <value name="field_name">Exception</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
-        <null name="field_opt"/>
+        <value name="field_opt">true</value>
         <value name="field_is_jsonSchema">true</value>
         <null name="title"/>
         <value name="description">Error message detailing what went wrong.</value>
@@ -93,7 +93,7 @@
         <value name="node_type">field</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">transactionId</value>
+        <value name="field_name">TransactionId</value>
         <value name="field_type">string</value>
         <value name="field_dim">0</value>
         <value name="field_opt">true</value>
