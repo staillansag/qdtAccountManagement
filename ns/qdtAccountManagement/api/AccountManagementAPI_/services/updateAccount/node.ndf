@@ -110,6 +110,28 @@
               <value name="field_is_jsonSchema">true</value>
               <value name="field_dim">0</value>
               <value name="field_opt">true</value>
+              <array name="field_content_type" type="record" depth="1">
+                <record javaclass="com.wm.util.Values">
+                  <record name="type" javaclass="com.wm.util.Values">
+                    <value name="key">type</value>
+                    <value name="value">object</value>
+                    <value name="type">STRING</value>
+                  </record>
+                  <record name="extendedProperties" javaclass="com.wm.util.Values">
+                    <record name="extensionName" javaclass="com.wm.util.Values">
+                      <value name="key">extensionName</value>
+                      <value name="value">openapi</value>
+                      <value name="type">STRING</value>
+                    </record>
+                    <record name="extensionVersion" javaclass="com.wm.util.Values">
+                      <value name="key">extensionVersion</value>
+                      <value name="value">3.0.2</value>
+                      <value name="type">STRING</value>
+                    </record>
+                  </record>
+                </record>
+              </array>
+              <value name="nillable">true</value>
               <value name="modifiable">true</value>
               <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account</value>
             </record>
@@ -164,6 +186,28 @@
               <value name="field_is_jsonSchema">true</value>
               <value name="field_dim">0</value>
               <value name="field_opt">true</value>
+              <array name="field_content_type" type="record" depth="1">
+                <record javaclass="com.wm.util.Values">
+                  <record name="type" javaclass="com.wm.util.Values">
+                    <value name="key">type</value>
+                    <value name="value">object</value>
+                    <value name="type">STRING</value>
+                  </record>
+                  <record name="extendedProperties" javaclass="com.wm.util.Values">
+                    <record name="extensionName" javaclass="com.wm.util.Values">
+                      <value name="key">extensionName</value>
+                      <value name="value">openapi</value>
+                      <value name="type">STRING</value>
+                    </record>
+                    <record name="extensionVersion" javaclass="com.wm.util.Values">
+                      <value name="key">extensionVersion</value>
+                      <value name="value">3.0.2</value>
+                      <value name="type">STRING</value>
+                    </record>
+                  </record>
+                </record>
+              </array>
+              <value name="nillable">true</value>
               <value name="modifiable">true</value>
               <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Account</value>
             </record>
@@ -190,6 +234,28 @@
               <value name="field_is_jsonSchema">true</value>
               <value name="field_dim">0</value>
               <value name="field_opt">true</value>
+              <array name="field_content_type" type="record" depth="1">
+                <record javaclass="com.wm.util.Values">
+                  <record name="type" javaclass="com.wm.util.Values">
+                    <value name="key">type</value>
+                    <value name="value">object</value>
+                    <value name="type">STRING</value>
+                  </record>
+                  <record name="extendedProperties" javaclass="com.wm.util.Values">
+                    <record name="extensionName" javaclass="com.wm.util.Values">
+                      <value name="key">extensionName</value>
+                      <value name="value">openapi</value>
+                      <value name="type">STRING</value>
+                    </record>
+                    <record name="extensionVersion" javaclass="com.wm.util.Values">
+                      <value name="key">extensionVersion</value>
+                      <value name="value">3.0.2</value>
+                      <value name="type">STRING</value>
+                    </record>
+                  </record>
+                </record>
+              </array>
+              <value name="nillable">true</value>
               <value name="modifiable">true</value>
               <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Error</value>
             </record>
@@ -216,6 +282,28 @@
               <value name="field_is_jsonSchema">true</value>
               <value name="field_dim">0</value>
               <value name="field_opt">true</value>
+              <array name="field_content_type" type="record" depth="1">
+                <record javaclass="com.wm.util.Values">
+                  <record name="type" javaclass="com.wm.util.Values">
+                    <value name="key">type</value>
+                    <value name="value">object</value>
+                    <value name="type">STRING</value>
+                  </record>
+                  <record name="extendedProperties" javaclass="com.wm.util.Values">
+                    <record name="extensionName" javaclass="com.wm.util.Values">
+                      <value name="key">extensionName</value>
+                      <value name="value">openapi</value>
+                      <value name="type">STRING</value>
+                    </record>
+                    <record name="extensionVersion" javaclass="com.wm.util.Values">
+                      <value name="key">extensionVersion</value>
+                      <value name="value">3.0.2</value>
+                      <value name="type">STRING</value>
+                    </record>
+                  </record>
+                </record>
+              </array>
+              <value name="nillable">true</value>
               <value name="modifiable">true</value>
               <value name="rec_ref">qdtAccountManagement.api.AccountManagementAPI_.docTypes:Error</value>
             </record>
@@ -259,7 +347,7 @@
     <value>PATCH</value>
   </array>
   <value name="pipeline_option">0</value>
-  <value name="originURI">file://C:\SoftwareAG\IntegrationServer\packages\qdtAccountManagement\resources\api\AccountManagementAPI.yml</value>
+  <value name="originURI">file://C:\SAG\IntegrationServer\packages\qdtAccountManagement\resources\api\AccountManagementAPI.yml</value>
   <value name="modifiable">true</value>
   <value name="is_public">false</value>
 </Values>

@@ -6,8 +6,8 @@
   <value name="node_nsName">qdtAccountManagement.api:AccountManagementAPI</value>
   <value name="node_pkg">qdtAccountManagement</value>
   <value name="is_public">false</value>
-  <value name="sourceUri">file://C:\SoftwareAG\IntegrationServer\packages\qdtAccountManagement\resources\api\AccountManagementAPI.yml</value>
-  <value name="swaggerUrl">file:/C:/SoftwareAG/IntegrationServer/packages/qdtAccountManagement/resources/api/AccountManagementAPI.yml</value>
+  <value name="sourceUri">file://C:\SAG\IntegrationServer\packages\qdtAccountManagement\resources\api\AccountManagementAPI.yml</value>
+  <value name="swaggerUrl">file:/C:/SAG/IntegrationServer/packages/qdtAccountManagement/resources/api/AccountManagementAPI.yml</value>
   <Boolean name="modifiable">true</Boolean>
   <value name="version">3.0.0</value>
   <record name="info" javaclass="com.wm.util.Values">

@@ -52,7 +52,7 @@
       </record>
     </array>
   </record>
-  <value name="originUri">file://C:\SoftwareAG\IntegrationServer\packages\qdtAccountManagement\resources\api\AccountManagementAPI.yml</value>
+  <value name="originUri">file://C:\SAG\IntegrationServer\packages\qdtAccountManagement\resources\api\AccountManagementAPI.yml</value>
   <value name="resourceName">Account</value>
   <Boolean name="modifiable">false</Boolean>
   <null name="srcdoctypename"/>

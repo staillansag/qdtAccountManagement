@@ -543,7 +543,13 @@ components:
           type: string
           description: Error message detailing what went wrong.
           maxLength: 1000
-          example: "An unexpected error occurred."
+          example: "Internal server error"
+        Code:          
+          type: string
+          description: HTTP status code associated to the error.
+          minLength: 3
+          maxLength: 3
+          example: "500"          
         TransactionId:
           type: string
           description: A unique identifier for the transaction, for debugging.

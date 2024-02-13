@@ -141,6 +141,11 @@
         <null name="writeOnly"/>
         <array name="field_content_type" type="record" depth="1">
           <record javaclass="com.wm.util.Values">
+            <record name="type" javaclass="com.wm.util.Values">
+              <value name="key">type</value>
+              <value name="value">object</value>
+              <value name="type">STRING</value>
+            </record>
             <record name="maxItems" javaclass="com.wm.util.Values">
               <value name="key">maxItems</value>
               <number name="value" type="Integer">2000</number>

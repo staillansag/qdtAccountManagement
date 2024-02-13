@@ -175,8 +175,6 @@ paths:
             schema:
               $ref: '#/components/schemas/Account'
             example:
-              id: 0017Q00000sXM0pQAG
-              isActive: true
               name: Software AG France
               type: Customer - Direct
               description: French subsidiary of Software AG
@@ -196,8 +194,6 @@ paths:
               industry: NAF5829C
               identifierType: SIREN
               identifierValue: "327992319"
-              creationDateTime: 2022-12-05T11:23:56.724Z
-              lastUpdateDateTime: 2022-12-05T11:23:56.724Z
         required: true
       responses:
         "201":
@@ -332,8 +328,6 @@ paths:
             schema:
               $ref: '#/components/schemas/Account'
             example:
-              id: 0017Q00000sXM0pQAG
-              isActive: true
               name: Software AG France
               type: Customer - Direct
               description: French subsidiary of Software AG
@@ -590,7 +584,13 @@ components:
           maxLength: 1000
           type: string
           description: Error message detailing what went wrong.
-          example: An unexpected error occurred.
+          example: Internal server error
+        Code:
+          maxLength: 3
+          minLength: 3
+          type: string
+          description: HTTP status code associated to the error.
+          example: "500"
         TransactionId:
           maxLength: 50
           type: string
