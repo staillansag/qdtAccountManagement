@@ -72,7 +72,7 @@ paths:
                 paginatedAccountsExample:
                   summary: Exemple de comptes paginés
                   value: 
-                    itemCount: 2
+                    itemCount: 1
                     hasMore: false
                     accounts: 
                       - id: "0017Q00000sXM0pQAG"
@@ -80,7 +80,6 @@ paths:
                         name: "Software AG France"
                         type: "Customer - Direct"
                         description: "French subsidiary of Software AG"
-                        parentAccountId: "0017Q000009ZWn6QAG"
                         billingAddress: 
                           street: "4 place des Saisons"
                           city: "Courbevoie"
@@ -88,38 +87,16 @@ paths:
                           postalCode: "92400"
                           countryCode: "FR"
                         shippingAddress: 
-                          street: "4 place des Saisons"
-                          city: "Courbevoie"
-                          state: ""
-                          postalCode: "92400"
+                          street: "1 rue de Rivoli"
+                          city: "Paris"
+                          state: "Ile de France"
+                          postalCode: "75001"
                           countryCode: "FR"
                         industry: "NAF5829C"
                         identifierType: "SIREN"
                         identifierValue: "327992319"
                         creationDateTime: "2022-12-05T11:23:56.724Z"
                         lastUpdateDateTime: "2022-12-05T11:23:56.724Z"
-                      - id: "0017Q000009ZWn6QAG"
-                        isActive: true
-                        name: "Software AG"
-                        type: "Customer - Direct"
-                        description: "Software AG HQ"
-                        billingAddress: 
-                          street: "Uhlandstraße 12"
-                          city: "Darmstadt"
-                          state: ""
-                          postalCode: "64297"
-                          countryCode: "DE"
-                        shippingAddress: 
-                          street: "Uhlandstraße 12"
-                          city: "Darmstadt"
-                          state: ""
-                          postalCode: "64297"
-                          countryCode: "DE"
-                        industry: "SIC73737"
-                        identifierType: "VAT"
-                        identifierValue: "DE 111 660 314"
-                        creationDateTime: "2022-12-01T09:00:00.000Z"
-                        lastUpdateDateTime: "2022-12-01T09:00:00.000Z"
         '400':
           description: Bad request. Error details provided in the response.
           content:
@@ -152,18 +129,17 @@ paths:
               name: "Software AG France"
               type: "Customer - Direct"
               description: "French subsidiary of Software AG"
-              parentAccountId: "0017Q000009ZWn6QAG"
               billingAddress:
                 street: "4 place des Saisons"
                 city: "Courbevoie"
                 state: ""
                 postalCode: "92400"
                 countryCode: "FR"
-              shippingAddress:
-                street: "4 place des Saisons"
-                city: "Courbevoie"
-                state: ""
-                postalCode: "92400"
+              shippingAddress: 
+                street: "1 rue de Rivoli"
+                city: "Paris"
+                state: "Ile de France"
+                postalCode: "75001"
                 countryCode: "FR"
               industry: "NAF5829C"
               identifierType: "SIREN"
@@ -181,18 +157,17 @@ paths:
                 name: "Software AG France"
                 type: "Customer - Direct"
                 description: "French subsidiary of Software AG"
-                parentAccountId: "0017Q000009ZWn6QAG"
                 billingAddress:
                   street: "4 place des Saisons"
                   city: "Courbevoie"
                   state: ""
                   postalCode: "92400"
                   countryCode: "FR"
-                shippingAddress:
-                  street: "4 place des Saisons"
-                  city: "Courbevoie"
-                  state: ""
-                  postalCode: "92400"
+                shippingAddress: 
+                  street: "1 rue de Rivoli"
+                  city: "Paris"
+                  state: "Ile de France"
+                  postalCode: "75001"
                   countryCode: "FR"
                 industry: "NAF5829C"
                 identifierType: "SIREN"
@@ -243,18 +218,17 @@ paths:
                 name: "Software AG France"
                 type: "Customer - Direct"
                 description: "French subsidiary of Software AG"
-                parentAccountId: "0017Q000009ZWn6QAG"
                 billingAddress:
                   street: "4 place des Saisons"
                   city: "Courbevoie"
                   state: ""
                   postalCode: "92400"
                   countryCode: "FR"
-                shippingAddress:
-                  street: "4 place des Saisons"
-                  city: "Courbevoie"
-                  state: ""
-                  postalCode: "92400"
+                shippingAddress: 
+                  street: "1 rue de Rivoli"
+                  city: "Paris"
+                  state: "Ile de France"
+                  postalCode: "75001"
                   countryCode: "FR"
                 industry: "NAF5829C"
                 identifierType: "SIREN"
@@ -303,16 +277,16 @@ paths:
               name: "Software AG France"
               type: "Customer - Direct"
               description: "French subsidiary of Software AG"
-              parentAccountId: "0017Q000009ZWn6QAG"
               billingAddress:
                 street: "4 place des Saisons"
                 city: "Courbevoie"
                 postalCode: "92400"
                 countryCode: "FR"
-              shippingAddress:
-                street: "4 place des Saisons"
-                city: "Courbevoie"
-                postalCode: "92400"
+              shippingAddress: 
+                street: "1 rue de Rivoli"
+                city: "Paris"
+                state: "Ile de France"
+                postalCode: "75001"
                 countryCode: "FR"
               industry: "NAF5829C"
               identifierType: "SIREN"
@@ -330,16 +304,16 @@ paths:
                 name: "Software AG France"
                 type: "Customer - Direct"
                 description: "French subsidiary of Software AG"
-                parentAccountId: "0017Q000009ZWn6QAG"
                 billingAddress:
                   street: "4 place des Saisons"
                   city: "Courbevoie"
                   postalCode: "92400"
                   countryCode: "FR"
-                shippingAddress:
-                  street: "4 place des Saisons"
-                  city: "Courbevoie"
-                  postalCode: "92400"
+                shippingAddress: 
+                  street: "1 rue de Rivoli"
+                  city: "Paris"
+                  state: "Ile de France"
+                  postalCode: "75001"
                   countryCode: "FR"
                 industry: "NAF5829C"
                 identifierType: "SIREN"
@@ -436,13 +410,11 @@ components:
             This id is allocated by the server so it must not be provided when creating an account using POST / accounts.
           maxLength: 50
           example: "0017Q00000sXM0pQAG"
-          readOnly: true
         isActive:
           type: boolean
           description: Indicates if the account is active or logically deleted.
           default: true
           example: true
-          readOnly: true
         name:
           type: string
           description: Name of the account.

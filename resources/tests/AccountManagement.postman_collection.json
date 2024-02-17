@@ -1,0 +1,1705 @@
+{
+	"info": {
+		"_postman_id": "e7bd7f61-297c-428f-9ce4-ed07f69e3221",
+		"name": "QDT Account Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Passing tests",
+			"item": [
+				{
+					"name": "Create account",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"function checkNullOrEmpty(variableValue, responseValue) {",
+									"    if (responseValue === undefined || responseValue === null) {",
+									"        return (variableValue === \"\" || variableValue === null);",
+									"    } else {",
+									"        return variableValue === responseValue;",
+									"    }",
+									"}",
+									"",
+									"pm.test(\"Account name matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountName\"), responseJson.name)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Account type matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountType\"), responseJson.type)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Account description matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountDescription\"), responseJson.description)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Parent account ID matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"parentAccountId\"), responseJson.parentAccountId)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address street matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressStreet\"), responseJson.billingAddress.street)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address city matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressCity\"), responseJson.billingAddress.city)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address state matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressState\"), responseJson.billingAddress.state)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address postal code matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressPostalCode\"), responseJson.billingAddress.postalCode)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address country code matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressCountryCode\"), responseJson.billingAddress.countryCode)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Shipping address street matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"shippingAddressStreet\"), responseJson.shippingAddress.street)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Industry matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"industry\"), responseJson.industry)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Identifier type matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"identifierType\"), responseJson.identifierType)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Identifier value matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"identifierValue\"), responseJson.identifierValue)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"id is returned and has a length of 18 characters\", function () {",
+									"    pm.expect(responseJson).to.have.property('id');",
+									"    pm.expect(responseJson.id).to.be.a('string');",
+									"    pm.expect(responseJson.id.length).to.eql(18);",
+									"});",
+									"",
+									"pm.test(\"isActive is returned and is true\", function () {",
+									"    pm.expect(responseJson).to.have.property('isActive');",
+									"    pm.expect(responseJson.isActive).to.be.a('boolean');",
+									"    pm.expect(responseJson.isActive).to.be.true;",
+									"});",
+									"",
+									"pm.collectionVariables.set(\"accountId\", responseJson.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{accountName}}\",\n    \"type\": \"{{accountType}}\",\n    \"description\": \"{{accountDescription}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreet}}\",\n        \"city\": \"{{billingAddressCity}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industry}}\",\n    \"identifierType\": \"{{identifierType}}\",\n    \"identifierValue\": \"{{identifierValue}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve account",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"function checkNullOrEmpty(variableValue, responseValue) {",
+									"    if (responseValue === undefined || responseValue === null) {",
+									"        return (variableValue === \"\" || variableValue === null);",
+									"    } else {",
+									"        return variableValue === responseValue;",
+									"    }",
+									"}",
+									"",
+									"pm.test(\"Id value matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountId\"), responseJson.id)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"isActive is active\", function () {",
+									"    pm.expect(responseJson.isActive).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Account name matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountName\"), responseJson.name)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Account type matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountType\"), responseJson.type)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Account description matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountDescription\"), responseJson.description)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Parent account ID matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"parentAccountId\"), responseJson.parentAccountId)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address street matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressStreet\"), responseJson.billingAddress.street)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address city matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressCity\"), responseJson.billingAddress.city)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address state matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressState\"), responseJson.billingAddress.state)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address postal code matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressPostalCode\"), responseJson.billingAddress.postalCode)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address country code matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressCountryCode\"), responseJson.billingAddress.countryCode)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Shipping address street matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"shippingAddressStreet\"), responseJson.shippingAddress.street)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Industry matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"industry\"), responseJson.industry)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Identifier type matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"identifierType\"), responseJson.identifierType)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Identifier value matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"identifierValue\"), responseJson.identifierValue)).to.be.true;",
+									"});",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts/{{accountId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List accounts",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"const targetAccount = responseJson.accounts.find(account => account.id === pm.collectionVariables.get(\"accountId\"));",
+									"",
+									"function checkNullOrEmpty(variableValue, responseValue) {",
+									"    if (responseValue === undefined || responseValue === null) {",
+									"        return (variableValue === \"\" || variableValue === null);",
+									"    } else {",
+									"        return variableValue === responseValue;",
+									"    }",
+									"}",
+									"",
+									"pm.test(\"Account found\", function() {",
+									"    pm.expect(targetAccount).to.not.be.undefined;",
+									"    pm.expect(targetAccount).to.not.be.null;",
+									"});",
+									"",
+									"pm.test(\"Id value matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountId\"), targetAccount.id)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"isActive is active\", function () {",
+									"    pm.expect(targetAccount.isActive).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Account name matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountName\"), targetAccount.name)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Account type matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountType\"), targetAccount.type)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Account description matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountDescription\"), targetAccount.description)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Parent account ID matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"parentAccountId\"), targetAccount.parentAccountId)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address street matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressStreet\"), targetAccount.billingAddress.street)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address city matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressCity\"), targetAccount.billingAddress.city)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address state matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressState\"), targetAccount.billingAddress.state)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address postal code matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressPostalCode\"), targetAccount.billingAddress.postalCode)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address country code matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressCountryCode\"), targetAccount.billingAddress.countryCode)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Shipping address street matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"shippingAddressStreet\"), targetAccount.shippingAddress.street)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Industry matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"industry\"), targetAccount.industry)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Identifier type matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"identifierType\"), targetAccount.identifierType)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Identifier value matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"identifierValue\"), targetAccount.identifierValue)).to.be.true;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts?name={{accountName}}&isActive=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "{{accountName}}"
+								},
+								{
+									"key": "isActive",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update account",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"function checkNullOrEmpty(variableValue, responseValue) {",
+									"    if (responseValue === undefined || responseValue === null) {",
+									"        return (variableValue === \"\" || variableValue === null);",
+									"    } else {",
+									"        return variableValue === responseValue;",
+									"    }",
+									"}",
+									"",
+									"pm.test(\"Id value matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountId\"), responseJson.id)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"isActive is active\", function () {",
+									"    pm.expect(responseJson.isActive).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Account name matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountNameNew\"), responseJson.name)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Account type matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountTypeNew\"), responseJson.type)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Account description matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"accountDescriptionNew\"), responseJson.description)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Parent account ID matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"parentAccountId\"), responseJson.parentAccountId)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address street matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressStreetNew\"), responseJson.billingAddress.street)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address city matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressCityNew\"), responseJson.billingAddress.city)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address state matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressState\"), responseJson.billingAddress.state)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address postal code matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressPostalCode\"), responseJson.billingAddress.postalCode)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Billing address country code matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"billingAddressCountryCode\"), responseJson.billingAddress.countryCode)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Shipping address street matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"shippingAddressStreet\"), responseJson.shippingAddress.street)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Industry matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"industryNew\"), responseJson.industry)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Identifier type matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"identifierTypeNew\"), responseJson.identifierType)).to.be.true;",
+									"});",
+									"",
+									"pm.test(\"Identifier value matches\", function () {",
+									"    pm.expect(checkNullOrEmpty(pm.collectionVariables.get(\"identifierValueNew\"), responseJson.identifierValue)).to.be.true;",
+									"});",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{accountId}}\",\n    \"name\": \"{{accountNameNew}}\",\n    \"type\": \"{{accountTypeNew}}\",\n    \"description\": \"{{accountDescriptionNew}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreetNew}}\",\n        \"city\": \"{{billingAddressCityNew}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industryNew}}\",\n    \"identifierType\": \"{{identifierTypeNew}}\",\n    \"identifierValue\": \"{{identifierValueNew}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts/{{accountId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete account",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts/{{accountId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify account deletion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"function checkNullOrEmpty(variableValue, responseValue) {",
+									"    if (responseValue === undefined || responseValue === null) {",
+									"        return (variableValue === \"\" || variableValue === null);",
+									"    } else {",
+									"        return variableValue === responseValue;",
+									"    }",
+									"}",
+									"",
+									"",
+									"pm.test(\"isActive is inactive\", function () {",
+									"    pm.expect(responseJson.isActive).to.be.false;",
+									"});",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-test-account-deleted",
+								"value": "true",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/accounts/{{accountId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create account errors",
+			"item": [
+				{
+					"name": "Unauthorized",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{accountName}}\",\n    \"type\": \"{{accountType}}\",\n    \"description\": \"{{accountDescription}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreet}}\",\n        \"city\": \"{{billingAddressCity}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industry}}\",\n    \"identifierType\": \"{{identifierType}}\",\n    \"identifierValue\": \"{{identifierValue}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Missing name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"{{accountType}}\",\n    \"description\": \"{{accountDescription}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreet}}\",\n        \"city\": \"{{billingAddressCity}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industry}}\",\n    \"identifierType\": \"{{identifierType}}\",\n    \"identifierValue\": \"{{identifierValue}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empty name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"\",\n    \"type\": \"{{accountType}}\",\n    \"description\": \"{{accountDescription}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreet}}\",\n        \"city\": \"{{billingAddressCity}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industry}}\",\n    \"identifierType\": \"{{identifierType}}\",\n    \"identifierValue\": \"{{identifierValue}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Missing type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{accountName}}\",\n    \"description\": \"{{accountDescription}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreet}}\",\n        \"city\": \"{{billingAddressCity}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industry}}\",\n    \"identifierType\": \"{{identifierType}}\",\n    \"identifierValue\": \"{{identifierValue}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const responseJson = pm.response.json();",
+									"",
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{accountName}}\",\n    \"type\": \"abcd\",\n    \"description\": \"{{accountDescription}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreet}}\",\n        \"city\": \"{{billingAddressCity}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industry}}\",\n    \"identifierType\": \"{{identifierType}}\",\n    \"identifierValue\": \"{{identifierValue}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update account errors",
+			"item": [
+				{
+					"name": "Unauthorized",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{accountId}}\",\n    \"name\": \"{{accountNameNew}}\",\n    \"type\": \"{{accountTypeNew}}\",\n    \"description\": \"{{accountDescriptionNew}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreetNew}}\",\n        \"city\": \"{{billingAddressCityNew}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industryNew}}\",\n    \"identifierType\": \"{{identifierTypeNew}}\",\n    \"identifierValue\": \"{{identifierValueNew}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts/{{accountId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-test-response-status",
+								"value": "404",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{accountId}}\",\n    \"name\": \"{{accountNameNew}}\",\n    \"type\": \"{{accountTypeNew}}\",\n    \"description\": \"{{accountDescriptionNew}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreetNew}}\",\n        \"city\": \"{{billingAddressCityNew}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industryNew}}\",\n    \"identifierType\": \"{{identifierTypeNew}}\",\n    \"identifierValue\": \"{{identifierValueNew}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts/0017Q00000sXM0pXXX",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"0017Q00000sXM0pXXX"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Missing name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{accountId}}\",\n    \"type\": \"{{accountTypeNew}}\",\n    \"description\": \"{{accountDescriptionNew}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreetNew}}\",\n        \"city\": \"{{billingAddressCityNew}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industryNew}}\",\n    \"identifierType\": \"{{identifierTypeNew}}\",\n    \"identifierValue\": \"{{identifierValueNew}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts/{{accountId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Name too short",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{accountId}}\",\n    \"name\": \"a\",\n    \"type\": \"{{accountTypeNew}}\",\n    \"description\": \"{{accountDescriptionNew}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreetNew}}\",\n        \"city\": \"{{billingAddressCityNew}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industryNew}}\",\n    \"identifierType\": \"{{identifierTypeNew}}\",\n    \"identifierValue\": \"{{identifierValueNew}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts/{{accountId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Missing type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{accountId}}\",\n    \"name\": \"{{accountNameNew}}\",\n    \"description\": \"{{accountDescriptionNew}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreetNew}}\",\n        \"city\": \"{{billingAddressCityNew}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industryNew}}\",\n    \"identifierType\": \"{{identifierTypeNew}}\",\n    \"identifierValue\": \"{{identifierValueNew}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts/{{accountId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"{{accountId}}\",\n    \"name\": \"{{accountNameNew}}\",\n    \"type\": \"\",\n    \"description\": \"{{accountDescriptionNew}}\",\n    \"parentAccountId\": \"{{parentAccountId}}\",\n    \"billingAddress\": {\n        \"street\": \"{{billingAddressStreetNew}}\",\n        \"city\": \"{{billingAddressCityNew}}\",\n        \"state\": \"{{billingAddressState}}\",\n        \"postalCode\": \"{{billingAddressPostalCode}}\",\n        \"countryCode\": \"{{billingAddressCountryCode}}\"\n    },\n    \"shippingAddress\": {\n        \"street\": \"{{shippingAddressStreet}}\",\n        \"city\": \"{{shippingAddressCity}}\",\n        \"state\": \"{{shippingAddressState}}\",\n        \"postalCode\": \"{{shippingAddressPostalCode}}\",\n        \"countryCode\": \"{{shippingAddressCountryCode}}\"\n    },\n    \"industry\": \"{{industryNew}}\",\n    \"identifierType\": \"{{identifierTypeNew}}\",\n    \"identifierValue\": \"{{identifierValueNew}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/accounts/{{accountId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "List accounts errors",
+			"item": [
+				{
+					"name": "Unauthorized",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid isActive",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts?isActive=abcd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "isActive",
+									"value": "abcd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid lastUpdateBefore",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts?lastUpdateBefore=2022-12-01 00:00:00Z",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "lastUpdateBefore",
+									"value": "2022-12-01 00:00:00Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid lastUpdateAfter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts?lastUpdateAfter=2022-11-01",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "lastUpdateAfter",
+									"value": "2022-11-01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid limit (value too high)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts?limit=10000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid limit (not numeric)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts?limit=abcd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "abcd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid sortBy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts?sortBy=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "sortBy",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid sortOrder",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts?sortOrder=abcd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "sortOrder",
+									"value": "abcd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unknown QP",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/accounts?abcd=abcd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "abcd",
+									"value": "abcd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "List accounts filters",
+			"item": []
+		},
+		{
+			"name": "Retrieve account errors",
+			"item": [
+				{
+					"name": "Unauthorized",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-test-response-status",
+								"value": "404",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/accounts/{{accountId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-test-response-status",
+								"value": "404",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/accounts/0017Q00000sXM0pXXX",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"0017Q00000sXM0pXXX"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete account errors",
+			"item": [
+				{
+					"name": "Unauthorized",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-test-response-status",
+								"value": "404",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/accounts/{{accountId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"{{accountId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Account not found",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-test-response-status",
+								"value": "404",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/accounts/0017Q00000sXM0pXXX",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"accounts",
+								"0017Q00000sXM0pXXX"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{apiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "x-gateway-apikey",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "accountName",
+			"value": "Software AG France",
+			"type": "default"
+		},
+		{
+			"key": "accountType",
+			"value": "Customer - Direct",
+			"type": "default"
+		},
+		{
+			"key": "accountDescription",
+			"value": "French subsidiary of Software AG",
+			"type": "default"
+		},
+		{
+			"key": "parentAccountId",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "billingAddressStreet",
+			"value": "4 place des Saisons",
+			"type": "default"
+		},
+		{
+			"key": "billingAddressCity",
+			"value": "Courbevoie",
+			"type": "default"
+		},
+		{
+			"key": "billingAddressState",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "billingAddressPostalCode",
+			"value": "92400",
+			"type": "default"
+		},
+		{
+			"key": "billingAddressCountryCode",
+			"value": "FR",
+			"type": "default"
+		},
+		{
+			"key": "shippingAddressStreet",
+			"value": "1 rue de Rivoli",
+			"type": "default"
+		},
+		{
+			"key": "shippingAddressCity",
+			"value": "Paris",
+			"type": "default"
+		},
+		{
+			"key": "shippingAddressState",
+			"value": "Ile de France",
+			"type": "default"
+		},
+		{
+			"key": "shippingAddressPostalCode",
+			"value": "75001",
+			"type": "default"
+		},
+		{
+			"key": "shippingAddressCountryCode",
+			"value": "FR",
+			"type": "default"
+		},
+		{
+			"key": "industry",
+			"value": "NAF5829C",
+			"type": "default"
+		},
+		{
+			"key": "identifierType",
+			"value": "SIREN",
+			"type": "default"
+		},
+		{
+			"key": "identifierValue",
+			"value": "327992319",
+			"type": "default"
+		},
+		{
+			"key": "accountId",
+			"value": ""
+		},
+		{
+			"key": "accountNameNew",
+			"value": "Software AG France Updated",
+			"type": "default"
+		},
+		{
+			"key": "accountTypeNew",
+			"value": "Prospect",
+			"type": "default"
+		},
+		{
+			"key": "accountDescriptionNew",
+			"value": "French subsidiary of Software AG Updated",
+			"type": "default"
+		},
+		{
+			"key": "billingAddressStreetNew",
+			"value": "4 place des Saisons Updated",
+			"type": "default"
+		},
+		{
+			"key": "billingAddressCityNew",
+			"value": "Courbevoie Updated",
+			"type": "default"
+		},
+		{
+			"key": "industryNew",
+			"value": "NAF5829CU",
+			"type": "default"
+		},
+		{
+			"key": "identifierTypeNew",
+			"value": "VAT",
+			"type": "default"
+		},
+		{
+			"key": "identifierValueNew",
+			"value": "1122334455",
+			"type": "default"
+		}
+	]
+}
