@@ -11,8 +11,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.StringJoiner;
-import java.util.TimeZone;
-import java.util.stream.Collectors;
 // --- <<IS-END-IMPORTS>> ---
 
 public final class services
@@ -39,17 +37,17 @@ public final class services
 		// [i] field:0:required jsonDate
 		// [o] object:0:required javaDate
 		// pipeline
-		IDataCursor pipelineCursor = pipeline.getCursor();
+		IDataCursor pipelineCursor = pipeline.getCursor(); 
 		String	jsonDate = IDataUtil.getString( pipelineCursor, "jsonDate" );
 		pipelineCursor.destroy();
 		
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
 		
-		Date date = null; 
+		Date date = null;
 		try {
-		    date = formatter.parse(jsonDate); 
+		date = formatter.parse(jsonDate); 
 		} catch (ParseException e) {
-		    throw new ServiceException(e.getMessage());
+		throw new ServiceException(e.getMessage());
 		}
 		
 		
@@ -58,8 +56,6 @@ public final class services
 		//Object javaDate = new Object();
 		IDataUtil.put( pipelineCursor_1, "javaDate", date );
 		pipelineCursor_1.destroy();
-		
-			
 		// --- <<IS-END>> ---
 
                 
@@ -81,14 +77,13 @@ public final class services
 		
 		StringJoiner joiner = new StringJoiner(", ");
 		for (String element : list) {
-		    joiner.add(element);
+		joiner.add(element);
 		}
 		
 		// pipeline
 		IDataCursor pipelineCursor_1 = pipeline.getCursor();
 		IDataUtil.put( pipelineCursor_1, "string", joiner.toString() );
 		pipelineCursor_1.destroy();
-			
 		// --- <<IS-END>> ---
 
                 

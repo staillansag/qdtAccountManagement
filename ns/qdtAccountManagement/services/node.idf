@@ -11,7 +11,5 @@
     <value>java.text.SimpleDateFormat</value>
     <value>java.util.Date</value>
     <value>java.util.StringJoiner</value>
-    <value>java.util.TimeZone</value>
-    <value>java.util.stream.Collectors</value>
   </array>
 </Values>
