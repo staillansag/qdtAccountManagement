@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "e7bd7f61-297c-428f-9ce4-ed07f69e3221",
+		"_postman_id": "60b915ab-40e3-487c-a12f-4de8454e0c9c",
 		"name": "QDT Account Management",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32883895"
 	},
 	"item": [
 		{
@@ -1190,7 +1191,13 @@
 					],
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{url}}/accounts?limit=10000",
 							"host": [
@@ -1427,13 +1434,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{url}}/accounts/0017Q00000sXM0pXXX",
+							"raw": "{{url}}/accounts/0017Q00000sXM0pXXX1",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"accounts",
-								"0017Q00000sXM0pXXX"
+								"0017Q00000sXM0pXXX1"
 							]
 						}
 					},
@@ -1557,6 +1564,7 @@
 			"script": {
 				"type": "text/javascript",
 				"exec": [
+					"pm.request.headers.upsert({key: 'Accept', value: 'application/json'});",
 					""
 				]
 			}
