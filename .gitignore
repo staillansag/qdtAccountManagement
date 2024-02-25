@@ -1,7 +1,4 @@
 *.bak
-.env
 
 /.classpath
 /.project
-
-microgateway-config.yml
