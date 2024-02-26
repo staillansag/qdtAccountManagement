@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Passing tests",
+			"name": "Functional tests",
 			"item": [
 				{
 					"name": "Create account",
@@ -1544,16 +1544,16 @@
 		}
 	],
 	"auth": {
-		"type": "apikey",
-		"apikey": [
+		"type": "basic",
+		"basic": [
 			{
-				"key": "value",
-				"value": "{{apiKey}}",
+				"key": "password",
+				"value": "{{password}}",
 				"type": "string"
 			},
 			{
-				"key": "key",
-				"value": "x-gateway-apikey",
+				"key": "username",
+				"value": "{{userName}}",
 				"type": "string"
 			}
 		]
