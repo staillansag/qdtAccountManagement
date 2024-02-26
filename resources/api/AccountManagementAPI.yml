@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: Account Management API
   version: 1.0.0
-  description: A CRUD API for managing accounts.
+  description: An API for managing accounts.
 paths:
   /accounts:
     get:
