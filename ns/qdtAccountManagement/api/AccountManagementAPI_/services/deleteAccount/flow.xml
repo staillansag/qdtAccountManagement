@@ -1602,7 +1602,7 @@
 </EXIT>
 </SEQUENCE>
 
-<SEQUENCE NAME="idLength != &#34;18&#34;" TIMEOUT="" EXIT-ON="FAILURE">
+<SEQUENCE NAME="idLength &lt; 15 OR idLength > 18" TIMEOUT="" EXIT-ON="FAILURE">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
